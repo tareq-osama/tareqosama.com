@@ -1,19 +1,20 @@
 // src/app/(app)/client/layout.tsx
+import { type ReactNode } from 'react'
 import type { Metadata } from "next"
-import { redirect } from "next/navigation"
 import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 
 export const metadata: Metadata = {
   title: "Corvex® Client Portal",
   description: "Client Portal Dashboard",
 }
 
-export default async function ClientLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  // Check if user is authenticated and is a client
+interface ClientLayoutProps {
+  children: ReactNode
+}
+
+export default async function ClientLayout({ children }: ClientLayoutProps) {
+  // Auth check
   const cookieStore = await cookies()
   const token = cookieStore.get('token')
 
