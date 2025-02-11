@@ -53,7 +53,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-white border-slate-300 hover:bg-red-500 text-lg px-8 py-6 rounded-full min-w-[200px]"
+                className="text-white border-slate-300 bg-slate-700 hover:bg-slate-300 hover:text-slate-900 text-lg px-8 py-6 rounded-full min-w-[200px]"
               >
                 Watch video
               </Button>
