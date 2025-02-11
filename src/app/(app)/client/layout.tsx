@@ -18,7 +18,7 @@ export default async function ClientLayout({
   const token = cookieStore.get('token')
 
   if (!token) {
-    redirect('/client-login')
+    redirect('/login')
   }
 
   return (
