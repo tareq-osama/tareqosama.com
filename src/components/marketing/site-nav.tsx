@@ -90,13 +90,13 @@ export default function Navbar() {
 
            <div className="hidden lg:flex items-center gap-4">
              <Link
-               href="/login"
+               href="https://app.usecorvex.com/login"
                className="text-sm font-medium text-white border-slate-700 border hover:bg-slate-600 px-4 py-2 rounded-full transition-colors"
              >
                Log in
              </Link>
              <Link
-               href="/signup"
+               href="https://app.usecorvex.com/signup"
                className="text-sm font-medium text-white border-slate-700 border hover:bg-slate-600 px-4 py-2 rounded-full transition-colors"
              >
                Get early access
