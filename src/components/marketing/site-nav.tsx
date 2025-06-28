@@ -91,6 +91,14 @@ export default function Navbar() {
 
            <div className="hidden lg:flex items-center gap-4">
              <Link
+               href="https://app.usercorvex.com"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+             >
+               Login
+             </Link>
+             <Link
                href="#pricing"
                className="text-sm font-medium text-white border-slate-700 border hover:bg-slate-600 px-4 py-2 rounded-full transition-colors"
                onClick={() => handleNavigation('#pricing')}
@@ -140,6 +148,15 @@ export default function Navbar() {
              </nav>
 
              <div className="flex flex-col gap-4 mt-8">
+               <Link
+                 href="https://app.usecorvex.com"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 onClick={() => setIsMobileMenuOpen(false)}
+                 className="text-center text-sm font-medium text-gray-300 hover:text-white px-4 py-3 transition-colors"
+               >
+                 Login
+               </Link>
                <Link
                  href="#pricing"
                  onClick={() => {
