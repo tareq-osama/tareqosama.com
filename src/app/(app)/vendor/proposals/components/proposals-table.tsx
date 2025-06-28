@@ -64,7 +64,7 @@ export function ProposalsTable({ data }: ProposalsTableProps) {
 
   return (
     <div className="w-full p-4">
-      <div className="flex items-center py-4">
+      <div className="flex items-centerb py-4">
         <Input
           placeholder="Filter title..."
           value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}

@@ -32,7 +32,7 @@ export default function Hero() {
             {/* Headline */}
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
               The All-in-One Client Portal for
-              <span className="block mt-2"> One-Person-Business</span>
+              <span className="block mt-2"> One-Person-Businesses</span>
             </h1>
 
             {/* Subheadline */}
