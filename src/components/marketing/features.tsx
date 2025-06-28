@@ -23,25 +23,25 @@ const features: Feature[] = [
     id: 'design',
     category: 'Design',
     title: 'A true design canvas, not just a visual HTML editor.',
-    imagePath: 'https://images.pexels.com/photos/11526277/pexels-photo-11526277.jpeg'
+    imagePath: '/screenshot.jpg'
   },
   {
     id: 'animations',
     category: 'Animations',
     title: 'A true design canvas, not just a visual HTML editor.',
-    imagePath: 'https://images.pexels.com/photos/1338396/pexels-photo-1338396.png'
+    imagePath: '/screenshot.jpg'
   },
   {
     id: 'collaborate',
     category: 'Collaborate',
     title: 'A true design canvas, not just a visual HTML editor.',
-    imagePath: 'https://images.pexels.com/photos/30427542/pexels-photo-30427542/free-photo-of-sleek-audi-interior-design-detail.jpeg'
+    imagePath: '/screenshot.jpg'
   },
   {
     id: 'publish',
     category: 'Publish',
     title: 'A true design canvas, not just a visual HTML editor.',
-    imagePath: 'https://images.pexels.com/photos/17036651/pexels-photo-17036651/free-photo-of-gear-shift-knob.jpeg'
+    imagePath: '/screenshot.jpg'
   }
 ];
 

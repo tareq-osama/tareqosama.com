@@ -69,7 +69,7 @@ export default function Hero() {
           >
             <div className="relative w-full h-[600px] rounded-xl overflow-hidden border border-white/10 shadow-2xl">
               <Image
-                src="/corvex-dashboard.png"
+                src="/corvex-dashboard.jpg"
                 alt="Corvex Dashboard"
                 fill
                 priority
