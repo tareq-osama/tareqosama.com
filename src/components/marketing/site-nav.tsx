@@ -60,10 +60,11 @@ export default function Navbar() {
            <Link href="/" className="relative w-32 h-8">
              <Image
                src="/corvexlogo.svg"
-               alt="Corvex"
+               alt="Corvex - Client Portal for One-Person Businesses"
                fill
                className="object-contain"
                priority
+               sizes="128px"
              />
            </Link>
 
@@ -90,16 +91,11 @@ export default function Navbar() {
 
            <div className="hidden lg:flex items-center gap-4">
              <Link
-               href="https://app.usecorvex.com/"
+               href="#pricing"
                className="text-sm font-medium text-white border-slate-700 border hover:bg-slate-600 px-4 py-2 rounded-full transition-colors"
+               onClick={() => handleNavigation('#pricing')}
              >
-               Log in
-             </Link>
-             <Link
-               href="https://app.usecorvex.com/signup"
-               className="text-sm font-medium text-white border-slate-700 border hover:bg-slate-600 px-4 py-2 rounded-full transition-colors"
-             >
-               Get early access
+               Get Started
              </Link>
            </div>
 
@@ -145,18 +141,14 @@ export default function Navbar() {
 
              <div className="flex flex-col gap-4 mt-8">
                <Link
-                 href="/login"
-                 onClick={() => setIsMobileMenuOpen(false)}
-                 className="text-center text-sm font-medium text-gray-500 hover:text-gray-300 transition-colors py-2"
-               >
-                 Log in
-               </Link>
-               <Link
-                 href="/signup"
-                 onClick={() => setIsMobileMenuOpen(false)}
+                 href="#pricing"
+                 onClick={() => {
+                   handleNavigation('#pricing');
+                   setIsMobileMenuOpen(false);
+                 }}
                  className="text-center text-sm font-medium text-white border-slate-700 border hover:bg-slate-600 px-4 py-3 rounded-full transition-colors"
                >
-                 Get early access
+                 Get Started
                </Link>
              </div>
            </div>

@@ -8,21 +8,18 @@ import Sitenav from "./site-nav";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-black overflow-hidden ">
+    <section className="relative min-h-screen bg-black overflow-hidden">
       {/* Gradient Orbs */}
       <div className="absolute -left-1/4 top-1/4 w-[600px] h-[600px] rounded-full bg-blue-500/20 blur-[120px]" />
       <div className="absolute -right-1/4 bottom-1/4 w-[600px] h-[600px] rounded-full bg-slate-700 blur-[120px]" />
       
       <div className="container mx-auto px-4 relative z-10">
-      
-      <div className="my-10">
-      <Sitenav/>
-      </div>
+        <div className="my-10">
+          <Sitenav />
+        </div>
 
         <div className="min-h-screen flex flex-col items-center justify-center text-center py-20">
           {/* Main Content */}
-
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -32,7 +29,7 @@ export default function Hero() {
             {/* Headline */}
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
               The All-in-One Client Portal for
-              <span className="block mt-2"> One-Person-Businesses</span>
+              <span className="block mt-2">One-Person Businesses</span>
             </h1>
 
             {/* Subheadline */}
@@ -48,14 +45,15 @@ export default function Hero() {
                 className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6 rounded-full min-w-[200px]"
                 asChild
               >
-                <Link href="/login">Start for free</Link>
+                <Link href="#features">Learn More</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="text-white border-slate-300 bg-slate-700 hover:bg-slate-300 hover:text-slate-900 text-lg px-8 py-6 rounded-full min-w-[200px]"
+                asChild
               >
-                Watch video
+                <Link href="#pricing">Get Started</Link>
               </Button>
             </div>
           </motion.div>
@@ -70,10 +68,13 @@ export default function Hero() {
             <div className="relative w-full h-[600px] rounded-xl overflow-hidden border border-white/10 shadow-2xl">
               <Image
                 src="/corvex-dashboard.jpg"
-                alt="Corvex Dashboard"
+                alt="Corvex Dashboard Preview - Client Portal Interface"
                 fill
                 priority
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             </div>
