@@ -4,7 +4,6 @@ import SocialProof from "@/components/marketing/social-proof";
 import Pricing from "@/components/marketing/pricing";
 import ClosingCTA from "@/components/marketing/closing-cta";
 import FeatureSlider from "@/components/marketing/features";
-import Footer from "@/components/marketing/footer";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <div id="pricing">
         <Pricing />
       </div>
-      <Footer />
     </main>
   );
 }
