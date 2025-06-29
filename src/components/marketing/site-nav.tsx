@@ -91,7 +91,7 @@ export default function Navbar() {
 
            <div className="hidden lg:flex items-center gap-4">
              <Link
-               href="https://app.usercorvex.com"
+               href="https://app.usecorvex.com"
                target="_blank"
                rel="noopener noreferrer"
                className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
