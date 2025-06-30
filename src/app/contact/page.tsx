@@ -27,7 +27,7 @@ export default function ContactPage() {
               </span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight tracking-tight">
+            <h1 className="text-h1 font-bold leading-tight tracking-tight">
               Let's transform your
               <span className="block mt-2 text-emerald-300">agency together</span>
             </h1>

@@ -99,7 +99,7 @@ export default function SocialProof() {
             <span className="text-sm font-medium text-emerald-300 tracking-wide uppercase">PROVEN SUCCESS STORIES</span>
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+                          <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
             Real agencies, real results,
             <span className="block mt-2 text-emerald-300">real revenue growth</span>
           </h2>

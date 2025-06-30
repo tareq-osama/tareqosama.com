@@ -66,7 +66,7 @@ export default function CaseStudiesPage() {
               </span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
+            <h1 className="text-h1 font-bold leading-tight tracking-tight">
               From chaos to excellence:
               <span className="block mt-2 text-emerald-300">Real agency success stories</span>
             </h1>

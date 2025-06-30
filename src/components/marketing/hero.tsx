@@ -42,7 +42,7 @@ export default function Hero() {
               </div>
 
               {/* Main Heading */}
-              <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight tracking-tight">
+              <h1 className="text-h1 font-bold text-white leading-tight tracking-tight">
                 Stop losing clients to
                 <span className="block text-zinc-300 mt-2">
                   unprofessional chaos

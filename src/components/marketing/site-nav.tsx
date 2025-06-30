@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { Menu, X, Zap, Users, FileText, Building, Play, Lightbulb, BookOpen, HelpCircle, User, Phone, Briefcase, ArrowRight } from 'lucide-react';
-import Lenis from '@studio-freight/lenis';
 
 import {
   NavigationMenu,
@@ -122,25 +121,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      smoothWheel: true,
-    });
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);

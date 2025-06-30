@@ -55,7 +55,7 @@ export default function PainPoints() {
             <span className="text-sm font-medium text-red-300 tracking-wide uppercase">THE HIDDEN COST OF CHAOS</span>
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+                        <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
             Your agency is bleeding money
             <span className="block mt-2 text-red-300">while you sleep</span>
           </h2>

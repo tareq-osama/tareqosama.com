@@ -81,7 +81,7 @@ export default function HelpPage() {
               </span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight tracking-tight">
+            <h1 className="text-h1 font-bold leading-tight tracking-tight">
               How can we
               <span className="block mt-2 text-emerald-300">help you today?</span>
             </h1>

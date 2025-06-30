@@ -143,7 +143,7 @@ export default function Pricing() {
             </span>
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+                      <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
             Transform your agency for less than
             <span className="block mt-2 text-emerald-300">your daily coffee budget</span>
           </h2>

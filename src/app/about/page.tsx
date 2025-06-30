@@ -84,7 +84,7 @@ export default function AboutPage() {
               </span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
+            <h1 className="text-h1 font-bold leading-tight tracking-tight">
               Transforming agencies from
               <span className="block mt-2 text-emerald-300">chaos to excellence</span>
             </h1>

@@ -89,7 +89,7 @@ export default function ClosingCTA() {
             </span>
           </div>
           
-          <h2 className="text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight">
+                        <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
             Your competitors are already
             <span className="block mt-2 text-red-300">stealing your clients</span>
           </h2>

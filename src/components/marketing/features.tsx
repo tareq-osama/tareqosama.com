@@ -70,7 +70,7 @@ export default function FeaturesSlider() {
               <span className="text-sm font-medium text-zinc-300 tracking-wide">FEATURES</span>
             </div>
             
-            <h2 className="text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight">
+                          <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
               Where agency management
               <span className="block mt-2 text-zinc-300">becomes effortless</span>
             </h2>

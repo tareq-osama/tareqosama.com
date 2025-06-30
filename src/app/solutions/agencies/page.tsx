@@ -59,7 +59,7 @@ export default function AgenciesPage() {
               </span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
+            <h1 className="text-h1 font-bold leading-tight tracking-tight">
               Stop losing clients to
               <span className="block mt-2 text-emerald-300">unprofessional chaos</span>
             </h1>
