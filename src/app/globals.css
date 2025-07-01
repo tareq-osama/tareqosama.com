@@ -60,13 +60,6 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.75rem;
     
-    /* Custom theme variables */
-    --surface: 0 0% 98%;
-    --surface-secondary: 0 0% 95%;
-    --text-primary: 0 0% 9%;
-    --text-secondary: 0 0% 45%;
-    --text-tertiary: 0 0% 65%;
-    
     /* Typography hierarchy variables */
     --text-h1: 3rem;      /* 48px - Main hero headings */
     --text-h2: 2.25rem;   /* 36px - Section headings */
@@ -80,6 +73,18 @@ body {
     --text-sm: 0.875rem;  /* 14px - Small text */
     --text-xs: 0.75rem;   /* 12px - Tiny text */
     
+    /* Minimalistic Design System Variables */
+    --space-section: 8rem;     /* 128px - Space between sections */
+    --space-component: 4rem;   /* 64px - Space within sections */
+    --space-element: 2rem;     /* 32px - Space between elements */
+    --space-tight: 1rem;      /* 16px - Tight spacing */
+    
+    /* Button Design System */
+    --button-height: 2.5rem;   /* 40px - Standard button height */
+    --button-padding-x: 1rem;  /* 16px - Button horizontal padding */
+    --button-radius: 0.5rem;   /* 8px - Button border radius */
+    --button-font-size: 0.875rem; /* 14px - Button text size */
+    
     /* Sidebar variables */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -92,24 +97,24 @@ body {
   }
 
   .dark {
-    --background: 0 0% 3.9%;
+    --background: 0 0% 6%;        /* Dark solid background */
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    --card: 0 0% 8%;              /* Slightly lighter cards */
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
+    --popover: 0 0% 8%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
+    --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 12%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
     --ring: 0 0% 83.1%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
@@ -117,21 +122,14 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
     
-    /* Custom dark theme variables */
-    --surface: 0 0% 6%;
-    --surface-secondary: 0 0% 9%;
-    --text-primary: 0 0% 98%;
-    --text-secondary: 0 0% 65%;
-    --text-tertiary: 0 0% 45%;
-    
     /* Dark sidebar variables */
-    --sidebar-background: 240 10% 3.9%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 0 0% 9%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 15%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -158,6 +156,41 @@ body {
   .text-h1 { font-size: calc(var(--text-h1) * 0.75); } /* 36px on mobile */
   .text-h2 { font-size: calc(var(--text-h2) * 0.85); } /* ~30px on mobile */
   .text-h3 { font-size: calc(var(--text-h3) * 0.85); } /* ~25px on mobile */
+}
+
+/* Design System Components */
+@layer components {
+  /* Unified Button Styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center font-medium bg-white text-black hover:bg-zinc-100 transition-colors;
+    height: var(--button-height);
+    padding: 0 var(--button-padding-x);
+    border-radius: var(--button-radius);
+    font-size: var(--button-font-size);
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center font-medium bg-transparent text-white border border-zinc-700 hover:bg-zinc-800 transition-colors;
+    height: var(--button-height);
+    padding: 0 var(--button-padding-x);
+    border-radius: var(--button-radius);
+    font-size: var(--button-font-size);
+  }
+  
+  /* Section Spacing */
+  .section-spacing {
+    padding-top: var(--space-section);
+    padding-bottom: var(--space-section);
+  }
+  
+  .component-spacing {
+    margin-bottom: var(--space-component);
+  }
+  
+  /* Card Styles */
+  .card-minimal {
+    @apply bg-zinc-900/30 border border-zinc-800 rounded-lg;
+  }
 }
 
 /* Scrollbar utilities */

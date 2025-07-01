@@ -83,7 +83,7 @@ const companyLogos = [
 
 export default function SocialProof() {
   return (
-    <section className="py-32 bg-gradient-to-b from-black via-zinc-900/50 to-black">
+    <section className="py-32 bg-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         {/* Section Header */}
@@ -94,14 +94,14 @@ export default function SocialProof() {
           viewport={{ once: true }}
           className="text-center space-y-6 mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-            <Award className="w-4 h-4 text-emerald-400" />
-            <span className="text-sm font-medium text-emerald-300 tracking-wide uppercase">PROVEN SUCCESS STORIES</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/50 border border-zinc-700">
+            <Award className="w-4 h-4 text-zinc-400" />
+            <span className="text-sm font-medium text-zinc-300 tracking-wide">Proven success stories</span>
           </div>
           
-                          <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
+          <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
             Real agencies, real results,
-            <span className="block mt-2 text-emerald-300">real revenue growth</span>
+            <span className="block mt-2 text-zinc-300">real revenue growth</span>
           </h2>
           
           <p className="text-lg lg:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
@@ -156,7 +156,7 @@ export default function SocialProof() {
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                   ))}
-                  <span className="text-emerald-400 font-semibold ml-2">FEATURED SUCCESS</span>
+                  <span className="text-emerald-400 font-semibold ml-2">Featured success</span>
                 </div>
                 
                 <blockquote className="text-xl lg:text-2xl text-white font-medium leading-relaxed">
@@ -247,8 +247,8 @@ export default function SocialProof() {
                 <div className="space-y-6">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-emerald-400" />
-                    <span className="text-emerald-400 font-semibold uppercase text-sm tracking-wider">
-                      FROM NEAR BANKRUPTCY TO 7-FIGURES
+                    <span className="text-emerald-400 font-semibold text-sm tracking-wider">
+                      From near bankruptcy to 7-figures
                     </span>
                   </div>
                   
@@ -273,7 +273,7 @@ export default function SocialProof() {
                 <div className="text-center lg:text-right space-y-4">
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
                     <TrendingUp className="w-4 h-4 text-emerald-400" />
-                    <span className="text-emerald-400 font-semibold text-sm">SUCCESS METRICS</span>
+                    <span className="text-emerald-400 font-semibold text-sm">Success metrics</span>
                   </div>
                   
                   <div className="space-y-2">
@@ -285,7 +285,7 @@ export default function SocialProof() {
                   {/* Visual proof overlay */}
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-400/20 text-xs">
                     <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-                    <span className="text-yellow-400 font-medium">VERIFIED RESULTS</span>
+                    <span className="text-yellow-400 font-medium">Verified results</span>
                   </div>
                 </div>
               </div>

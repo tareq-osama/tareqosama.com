@@ -283,7 +283,7 @@ export default function AgenciesPage() {
                     asChild
                   >
                     <Link href="/#pricing">
-                      STOP THE BLEEDING - START FREE NOW
+                      Stop the bleeding - Start free now
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>

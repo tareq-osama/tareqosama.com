@@ -61,8 +61,8 @@ export default function CaseStudiesPage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
               <TrendingUp className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm font-medium text-emerald-300 tracking-wide uppercase">
-                REAL TRANSFORMATIONS
+              <span className="text-sm font-medium text-emerald-300 tracking-wide">
+                Real transformations
               </span>
             </div>
             
@@ -95,8 +95,8 @@ export default function CaseStudiesPage() {
                     <div className="space-y-4">
                       <div className="flex items-center gap-2">
                         <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-                        <span className="text-emerald-400 font-semibold text-sm uppercase tracking-wider">
-                          FEATURED SUCCESS STORY
+                        <span className="text-emerald-400 font-semibold text-sm tracking-wider">
+                          Featured success story
                         </span>
                       </div>
                       

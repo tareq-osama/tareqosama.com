@@ -65,7 +65,7 @@ const guarantees = [
 
 export default function ClosingCTA() {
   return (
-    <section className="py-32 bg-gradient-to-b from-black via-zinc-900 to-black relative overflow-hidden">
+    <section className="py-32 bg-black relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
@@ -84,12 +84,12 @@ export default function ClosingCTA() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20">
             <Clock className="w-4 h-4 text-red-400 animate-pulse" />
-            <span className="text-sm font-medium text-red-300 tracking-wide uppercase">
-              THE COST OF WAITING IS CRUSHING YOU
+            <span className="text-sm font-medium text-red-300 tracking-wide">
+              The cost of waiting is crushing you
             </span>
           </div>
           
-                        <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
+          <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
             Your competitors are already
             <span className="block mt-2 text-red-300">stealing your clients</span>
           </h2>
@@ -315,7 +315,7 @@ export default function ClosingCTA() {
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-400/20">
                   <Clock className="w-4 h-4 text-yellow-400 animate-pulse" />
-                  <span className="text-yellow-400 font-semibold text-sm">TIME-SENSITIVE DECISION</span>
+                  <span className="text-yellow-400 font-semibold text-sm">Time-sensitive decision</span>
                 </div>
                 
                 <h3 className="text-3xl lg:text-5xl font-bold text-white leading-tight">
@@ -338,7 +338,7 @@ export default function ClosingCTA() {
                   size="lg"
                   className="bg-emerald-500 text-white hover:bg-emerald-400 font-semibold px-12 py-8 text-xl h-auto rounded-xl group shadow-2xl transform hover:scale-105 transition-all"
                 >
-                  STOP THE BLEEDING - START FREE NOW
+                  Stop the bleeding - Start free now
                   <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>

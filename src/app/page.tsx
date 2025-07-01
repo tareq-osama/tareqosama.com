@@ -7,16 +7,31 @@ import FeatureSlider from "@/components/marketing/features";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-zinc-950">
       <Hero />
-      <div id="features">
-        <FeatureSlider />
+      
+      <div className="section-spacing">
+        <div id="features">
+          <FeatureSlider />
+        </div>
       </div>
-      <ClosingCTA />
-      <PainPoints />
-      <SocialProof />
-      <div id="pricing">
-        <Pricing />
+      
+      <div className="section-spacing">
+        <PainPoints />
+      </div>
+      
+      <div className="section-spacing">
+        <SocialProof />
+      </div>
+      
+      <div className="section-spacing">
+        <div id="pricing">
+          <Pricing />
+        </div>
+      </div>
+      
+      <div className="section-spacing">
+        <ClosingCTA />
       </div>
     </main>
   );
