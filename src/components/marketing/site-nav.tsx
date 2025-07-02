@@ -94,28 +94,7 @@ const resources = [
   }
 ];
 
-const company = [
-  {
-    title: "About Us",
-    href: "/about",
-    description: "Learn about our mission and team"
-  },
-  {
-    title: "Contact",
-    href: "/contact", 
-    description: "Get in touch with our team"
-  },
-  {
-    title: "Careers",
-    href: "/careers",
-    description: "Join our growing team"
-  },
-  {
-    title: "Partners",
-    href: "/partners",
-    description: "Partner with Corvex"
-  }
-];
+
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -226,26 +205,6 @@ export default function Navbar() {
                             icon={resource.icon}
                           >
                             {resource.description}
-                          </ListItem>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-
-                  {/* Company Menu */}
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-transparent text-zinc-300 hover:text-white data-[state=open]:text-white">
-                      Company
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[300px] gap-3 p-4">
-                        {company.map((item) => (
-                          <ListItem
-                            key={item.title}
-                            title={item.title}
-                            href={item.href}
-                          >
-                            {item.description}
                           </ListItem>
                         ))}
                       </ul>

@@ -13,13 +13,7 @@ const footerLinks = {
     { name: "API", href: "/api" },
     { name: "Changelog", href: "/changelog" }
   ],
-  company: [
-    { name: "About", href: "/about" },
-    { name: "Blog", href: "/blog" },
-    { name: "Careers", href: "/careers" },
-    { name: "Press", href: "/press" },
-    { name: "Contact", href: "/contact" }
-  ],
+
   resources: [
     { name: "Help Center", href: "/help" },
     { name: "Documentation", href: "/docs" },
@@ -64,22 +58,6 @@ export default function Footer() {
             <h4 className="text-sm font-medium text-white">Product</h4>
             <ul className="space-y-3">
               {footerLinks.product.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    href={link.href}
-                    className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="space-y-6">
-            <h4 className="text-sm font-medium text-white">Company</h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link, index) => (
                 <li key={index}>
                   <Link 
                     href={link.href}
