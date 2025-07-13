@@ -134,7 +134,7 @@ export default function FeaturesSlider() {
       </div>
 
       {/* Navigation Section */}
-      <div className="bg-zinc-900/50 backdrop-blur-sm border-t border-zinc-800">
+      <div className="">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between py-8 gap-6">
             {/* Feature Tabs */}
@@ -162,14 +162,14 @@ export default function FeaturesSlider() {
             <div className="flex gap-3 flex-shrink-0">
               <button 
                 onClick={() => swiper?.slidePrev()}
-                className="p-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white transition-colors duration-200 border border-zinc-700"
+                className="p-3 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white transition-colors duration-200 border border-zinc-700"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={() => swiper?.slideNext()}
-                className="p-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white transition-colors duration-200 border border-zinc-700"
+                className="p-3 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white transition-colors duration-200 border border-zinc-700"
                 aria-label="Next slide"
               >
                 <ChevronRight className="w-5 h-5" />

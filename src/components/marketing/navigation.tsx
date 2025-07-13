@@ -198,10 +198,10 @@ export default function Navigation() {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center space-x-4">
               <Button variant="ghost" size="sm" asChild>
-                <Link href="/login">Login</Link>
+                <Link href="/https://app.usecorvex.com">Login</Link>
               </Button>
               <Button size="sm" asChild>
-                <Link href="https://app.usecorvex.com">Get started</Link>
+                <Link href="https://app.usecorvex.com/signup">Get started</Link>
               </Button>
             </div>
 
