@@ -96,7 +96,6 @@ export default function AgenciesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Problem Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -162,7 +161,6 @@ export default function AgenciesPage() {
           </div>
         </div>
       </section>
-
       {/* Solution Section */}
       <section className="py-20 px-6 bg-zinc-900/20">
         <div className="max-w-7xl mx-auto">
@@ -252,7 +250,6 @@ export default function AgenciesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">

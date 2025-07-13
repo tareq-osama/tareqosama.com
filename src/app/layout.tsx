@@ -1,8 +1,7 @@
-// app/layout.tsx
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
-import Navbar from "@/components/marketing/site-nav"
+import Navigation from "@/components/marketing/navigation"
 import Footer from "@/components/marketing/footer"
 import "./globals.css"
 
@@ -64,8 +63,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="min-h-screen flex flex-col">
-            <Navbar />
-            <main className="flex-1">
+            <Navigation />
+            <main className="flex-1 pt-20">
               {children}
             </main>
             <Footer />

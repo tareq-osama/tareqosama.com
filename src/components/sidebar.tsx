@@ -36,7 +36,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </div>
         </div>
       </SidebarHeader>
-
       <SidebarContent>
         <nav className="space-y-1">
           {navigation.map((item) => (
@@ -47,20 +46,17 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 pathname === item.url
                   ? "bg-primary text-primary-foreground"
                   : "text-muted-foreground hover:text-foreground hover:bg-muted"
-              }`}
-            >
+              }`}>
               {item.title}
             </Link>
           ))}
         </nav>
       </SidebarContent>
-
       <SidebarFooter>
         <div className="p-4 text-xs text-muted-foreground">
           © 2024 Corvex
         </div>
       </SidebarFooter>
-
       <SidebarRail />
     </Sidebar>
   );

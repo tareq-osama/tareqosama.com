@@ -54,7 +54,7 @@ export default function FeaturesSlider() {
   return (
     <section className="relative w-full bg-background overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black" />
+      <div className="absolute inset-0" />
       
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-8">
         {/* Header Section */}
@@ -67,7 +67,7 @@ export default function FeaturesSlider() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/50 border border-zinc-700">
               <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-zinc-300 tracking-wide">FEATURES</span>
+              <span className="text-sm font-medium text-zinc-300 tracking-wide">Features</span>
             </div>
             
                           <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
@@ -96,6 +96,7 @@ export default function FeaturesSlider() {
             {features[currentIndex].title}
           </h3>
         </motion.div>
+
 
         {/* Swiper Section */}
         <div className="relative mb-16">
