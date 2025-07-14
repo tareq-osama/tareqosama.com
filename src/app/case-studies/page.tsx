@@ -1,12 +1,11 @@
 "use client"
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { TrendingUp, ArrowRight, Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { ArrowRight, Check, Star, TrendingUp, Users, DollarSign, Clock } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const caseStudies = [
   {
@@ -49,195 +48,207 @@ const caseStudies = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center space-y-8"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-              <TrendingUp className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm font-medium text-emerald-300 tracking-wide">
-                Real transformations
-              </span>
-            </div>
-            
-            <h1 className="text-h1 font-bold leading-tight tracking-tight">
+      <section className="relative w-full overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background/90" />
+        <div className="relative items-center justify-center flex-col mx-auto px-6 py-24 text-center">
+          {/* Small label above headline */}
+          <p className="text-sm text-muted-foreground mb-8 font-medium tracking-wide">
+            Case Studies
+          </p>
+          
+          {/* Main headline */}
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-start text-6xl md:text-6xl font-bold text-foreground leading-[1.1] mb-8 tracking-tight">
               From chaos to excellence:
-              <span className="block mt-2 text-emerald-300">Real agency success stories</span>
+              <br />
+              <span className="relative">
+                Real business success stories.
+                <div className="absolute bottom-2 left-0 w-full h-1 bg-primary/20 rounded-full"></div>
+              </span>
             </h1>
-            
-            <p className="text-lg lg:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
-              See how agencies like yours transformed their operations, delighted clients, and 
-              <span className="text-white font-semibold"> multiplied their revenue</span> with Corvex.
-            </p>
-          </motion.div>
+          </div>
+
+          {/* Subtitle */}
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+            See how businesses like yours transformed their operations, delighted clients, and 
+            <span className="font-semibold text-foreground"> multiplied their revenue</span> with Corvex.
+          </p>
         </div>
       </section>
 
       {/* Featured Case Study */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <Card className="bg-gradient-to-br from-emerald-500/10 to-blue-500/10 border-emerald-500/20 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="grid lg:grid-cols-2 gap-0">
-                  <div className="p-8 lg:p-12 space-y-8">
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-2">
-                        <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-                        <span className="text-emerald-400 font-semibold text-sm tracking-wider">
-                          Featured success story
-                        </span>
-                      </div>
-                      
-                      <h2 className="text-2xl lg:text-3xl font-bold text-white leading-tight">
-                        {caseStudies[0].title}
-                      </h2>
+      <section className="w-full py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <Card className="border-primary/20 border-2 overflow-hidden">
+            <CardContent className="p-0">
+              <div className="grid lg:grid-cols-2 gap-0">
+                <div className="p-8 lg:p-12 space-y-8">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <Star className="w-5 h-5 text-primary fill-primary" />
+                      <span className="text-primary font-semibold text-sm tracking-wider">
+                        Featured success story
+                      </span>
                     </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-                      {caseStudies[0].results.map((result, index) => (
-                        <div key={index} className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-4 text-center">
-                          <div className="text-2xl font-bold text-emerald-400">{result.metric}</div>
-                          <div className="text-sm text-zinc-400">{result.label}</div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <blockquote className="text-lg text-zinc-300 italic border-l-4 border-emerald-500 pl-6">
-                      "{caseStudies[0].quote}"
-                    </blockquote>
-
-                    <div className="flex items-center gap-4">
-                      <div>
-                        <div className="font-semibold text-white">{caseStudies[0].founder}</div>
-                        <div className="text-sm text-zinc-400">Founder, {caseStudies[0].company}</div>
-                      </div>
-                    </div>
+                    
+                    <h2 className="text-2xl lg:text-3xl font-bold text-foreground leading-tight">
+                      {caseStudies[0].title}
+                    </h2>
                   </div>
 
-                  <div className="relative min-h-[400px] lg:min-h-full">
-                    <Image
-                      src={caseStudies[0].image}
-                      alt={`${caseStudies[0].company} dashboard`}
-                      fill
-                      className="object-cover"
-                      unoptimized
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent" />
+                  <div className="grid grid-cols-2 gap-4">
+                    {caseStudies[0].results.map((result, index) => (
+                      <div key={index} className="bg-muted/50 border border-border rounded-lg p-4 text-center">
+                        <div className="text-2xl font-bold text-primary">{result.metric}</div>
+                        <div className="text-sm text-muted-foreground">{result.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <blockquote className="text-lg text-muted-foreground italic border-l-4 border-primary pl-6">
+                    "{caseStudies[0].quote}"
+                  </blockquote>
+
+                  <div className="flex items-center gap-4">
+                    <div>
+                      <div className="font-semibold text-foreground">{caseStudies[0].founder}</div>
+                      <div className="text-sm text-muted-foreground">Founder, {caseStudies[0].company}</div>
+                    </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+
+                <div className="relative min-h-[400px] lg:min-h-full">
+                  <Image
+                    src={caseStudies[0].image}
+                    alt={`${caseStudies[0].company} dashboard`}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* Other Case Studies */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full py-24 bg-muted/30">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-6">
+              More success stories
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              See how other businesses transformed with Corvex.
+            </p>
+          </div>
+          
           <div className="grid lg:grid-cols-2 gap-8">
             {caseStudies.slice(1).map((study, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-zinc-900/50 border-zinc-700 h-full">
-                  <CardContent className="p-8 space-y-6">
-                    <div className="space-y-3">
-                      <h3 className="text-xl font-bold text-white leading-tight">
-                        {study.title}
-                      </h3>
-                      <div className="text-emerald-400 font-medium">{study.company}</div>
-                    </div>
+              <Card key={index} className="border-border/20 hover:border-primary/20 transition-colors">
+                <CardContent className="p-8 space-y-6">
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-bold text-foreground leading-tight">
+                      {study.title}
+                    </h3>
+                    <div className="text-primary font-medium">{study.company}</div>
+                  </div>
 
-                    <div className="grid grid-cols-2 gap-3">
-                      {study.results.map((result, resultIndex) => (
-                        <div key={resultIndex} className="bg-zinc-800/50 rounded-lg p-3 text-center">
-                          <div className="text-lg font-bold text-emerald-400">{result.metric}</div>
-                          <div className="text-xs text-zinc-400">{result.label}</div>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    {study.results.map((result, resultIndex) => (
+                      <div key={resultIndex} className="bg-muted/50 rounded-lg p-3 text-center">
+                        <div className="text-lg font-bold text-primary">{result.metric}</div>
+                        <div className="text-xs text-muted-foreground">{result.label}</div>
+                      </div>
+                    ))}
+                  </div>
 
-                    <blockquote className="text-sm text-zinc-300 italic">
-                      "{study.quote}"
-                    </blockquote>
+                  <blockquote className="text-sm text-muted-foreground italic">
+                    "{study.quote}"
+                  </blockquote>
 
-                    <div className="flex items-center justify-between">
-                      <div className="text-sm font-semibold text-white">{study.founder}</div>
-                      <Button size="sm" variant="outline" className="border-zinc-600 text-white hover:bg-zinc-800/50">
-                        Read More
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm font-semibold text-foreground">{study.founder}</div>
+                    <Button size="sm" variant="ghost" className="text-primary hover:text-primary">
+                      Read More
+                      <ArrowRight className="ml-1 h-3 w-3" />
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="w-full py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-6">
+              The numbers speak for themselves
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Real results from real businesses using Corvex.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">500+</div>
+              <div className="text-muted-foreground">Businesses transformed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">$50M+</div>
+              <div className="text-muted-foreground">Revenue generated</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">95%</div>
+              <div className="text-muted-foreground">Client satisfaction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">24hrs</div>
+              <div className="text-muted-foreground">Average setup time</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center space-y-8"
-          >
-            <Card className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border-emerald-500/20 max-w-4xl mx-auto">
-              <CardContent className="p-12 text-center space-y-8">
-                <div className="space-y-4">
-                  <h3 className="text-3xl lg:text-4xl font-bold text-white leading-tight">
-                    Ready to write your success story?
-                  </h3>
-                  <p className="text-lg text-zinc-300 max-w-2xl mx-auto leading-relaxed">
-                    Join these successful agencies and transform your operations from chaos to excellence.
-                  </p>
-                </div>
+      <section className="w-full py-24 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <Card className="border-primary/20 border-2">
+            <CardContent className="p-12 text-center space-y-8">
+              <div className="space-y-4">
+                <h3 className="text-4xl font-bold text-foreground leading-tight">
+                  Ready to write your success story?
+                </h3>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                  Join these successful businesses and transform your operations from chaos to excellence.
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button size="lg" className="px-8 py-3 text-base font-semibold group" asChild>
+                  <Link href="/pricing">
+                    Start Your Transformation FREE
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
                 
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                  <Button 
-                    size="lg"
-                    className="bg-emerald-500 text-white hover:bg-emerald-400 font-semibold px-8 py-6 text-lg h-auto rounded-xl group shadow-lg"
-                    asChild
-                  >
-                    <Link href="/#pricing">
-                      Start Your Transformation FREE
-                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </Button>
-                  
-                  <Button 
-                    size="lg"
-                    variant="outline"
-                    className="border-zinc-600 text-white hover:bg-zinc-800/50 px-8 py-6 text-lg h-auto rounded-xl"
-                    asChild
-                  >
-                    <Link href="/contact">
-                      Schedule a Demo
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+                <Button size="lg" variant="ghost" className="px-8 py-3 text-base font-semibold group" asChild>
+                  <Link href="/contact">
+                    Schedule a Demo
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
     </div>

@@ -174,23 +174,7 @@ export default function Navigation() {
                     </NavigationMenuContent>
                   </NavigationMenuItem>
 
-                  {/* Pricing */}
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <Link href="/pricing" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
-                        Pricing
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-
-                  {/* Blog */}
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
-                        Blog
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
+       
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
@@ -198,7 +182,7 @@ export default function Navigation() {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center space-x-4">
               <Button variant="ghost" size="sm" asChild>
-                <Link href="/https://app.usecorvex.com">Login</Link>
+                <Link href="https://app.usecorvex.com">Login</Link>
               </Button>
               <Button size="sm" asChild>
                 <Link href="https://app.usecorvex.com/signup">Get started</Link>
@@ -295,12 +279,12 @@ export default function Navigation() {
               {/* Mobile CTA */}
               <div className="flex flex-col space-y-3 pt-4 border-t border-border/20">
                 <Button variant="ghost" size="sm" asChild>
-                  <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link href="https://app.usecorvex.com" onClick={() => setIsMobileMenuOpen(false)}>
                     Login
                   </Link>
                 </Button>
                 <Button size="sm" asChild>
-                  <Link href="/signup" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link href="https://app.usecorvex.com/signup" onClick={() => setIsMobileMenuOpen(false)}>
                     Get started
                   </Link>
                 </Button>
