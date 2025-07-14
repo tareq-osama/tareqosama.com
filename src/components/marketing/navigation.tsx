@@ -74,6 +74,20 @@ export default function Navigation() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Prevent body scroll when mobile menu is open
+  React.useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -174,7 +188,19 @@ export default function Navigation() {
                     </NavigationMenuContent>
                   </NavigationMenuItem>
 
-       
+                  {/* Pricing */}
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/pricing"
+                        className={cn(
+                          "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-transparent focus:bg-transparent focus:text-foreground disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-transparent data-[state=open]:bg-transparent transition-colors"
+                        )}
+                      >
+                        Pricing
+                      </Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
@@ -207,87 +233,97 @@ export default function Navigation() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
-          <div className="fixed inset-0 bg-background/80 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
-          <div className="fixed top-20 left-0 right-0 bg-background border-b border-border/20 shadow-lg">
-            <div className="max-w-7xl mx-auto px-6 py-6 space-y-6">
-              {/* Mobile Features */}
-              <div>
-                <h3 className="font-semibold text-foreground mb-3">Features</h3>
-                <div className="space-y-2 pl-4">
-                  {features.map((feature) => (
-                    <Link
-                      key={feature.href}
-                      href={feature.href}
-                      className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}>
-                      {feature.title}
-                    </Link>
-                  ))}
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-background/80 backdrop-blur-sm transition-opacity duration-300" 
+            onClick={() => setIsMobileMenuOpen(false)} 
+          />
+          
+          {/* Mobile Menu Container */}
+          <div className="fixed top-20 left-0 right-0 bottom-0 bg-background border-b border-border/20 shadow-lg overflow-hidden transform transition-transform duration-300 ease-in-out">
+            {/* Scrollable Content */}
+            <div className="h-full overflow-y-auto">
+              <div className="max-w-7xl mx-auto px-6 py-6 space-y-6 pb-8">
+                
+                {/* Mobile Features */}
+                <div>
+                  <h3 className="font-semibold text-foreground mb-3">Features</h3>
+                  <div className="space-y-2 pl-4">
+                    {features.map((feature) => (
+                      <Link
+                        key={feature.href}
+                        href={feature.href}
+                        className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}>
+                        {feature.title}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* Mobile Solutions */}
-              <div>
-                <h3 className="font-semibold text-foreground mb-3">Solutions</h3>
-                <div className="space-y-2 pl-4">
-                  {solutions.map((solution) => (
-                    <Link
-                      key={solution.href}
-                      href={solution.href}
-                      className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}>
-                      {solution.title}
-                    </Link>
-                  ))}
+                {/* Mobile Solutions */}
+                <div>
+                  <h3 className="font-semibold text-foreground mb-3">Solutions</h3>
+                  <div className="space-y-2 pl-4">
+                    {solutions.map((solution) => (
+                      <Link
+                        key={solution.href}
+                        href={solution.href}
+                        className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}>
+                        {solution.title}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* Mobile Resources */}
-              <div>
-                <h3 className="font-semibold text-foreground mb-3">Resources</h3>
-                <div className="space-y-2 pl-4">
-                  {resources.map((resource) => (
-                    <Link
-                      key={resource.href}
-                      href={resource.href}
-                      className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}>
-                      {resource.title}
-                    </Link>
-                  ))}
+                {/* Mobile Resources */}
+                <div>
+                  <h3 className="font-semibold text-foreground mb-3">Resources</h3>
+                  <div className="space-y-2 pl-4">
+                    {resources.map((resource) => (
+                      <Link
+                        key={resource.href}
+                        href={resource.href}
+                        className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}>
+                        {resource.title}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* Mobile Direct Links */}
-              <div className="space-y-2">
-                <Link
-                  href="/pricing"
-                  className="block py-2 font-semibold text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Pricing
-                </Link>
-                <Link
-                  href="/blog"
-                  className="block py-2 font-semibold text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Blog
-                </Link>
-              </div>
-
-              {/* Mobile CTA */}
-              <div className="flex flex-col space-y-3 pt-4 border-t border-border/20">
-                <Button variant="ghost" size="sm" asChild>
-                  <Link href="https://app.usecorvex.com" onClick={() => setIsMobileMenuOpen(false)}>
-                    Login
+                {/* Mobile Direct Links */}
+                <div className="space-y-2">
+                  <Link
+                    href="/pricing"
+                    className="block py-2 font-semibold text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Pricing
                   </Link>
-                </Button>
-                <Button size="sm" asChild>
-                  <Link href="https://app.usecorvex.com/signup" onClick={() => setIsMobileMenuOpen(false)}>
-                    Get started
+                  <Link
+                    href="/blog"
+                    className="block py-2 font-semibold text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Blog
                   </Link>
-                </Button>
+                </div>
+
+                {/* Mobile CTA */}
+                <div className="flex flex-col space-y-3 pt-4 border-t border-border/20">
+                  <Button variant="ghost" size="sm" asChild>
+                    <Link href="https://app.usecorvex.com" onClick={() => setIsMobileMenuOpen(false)}>
+                      Login
+                    </Link>
+                  </Button>
+                  <Button size="sm" asChild>
+                    <Link href="https://app.usecorvex.com/signup" onClick={() => setIsMobileMenuOpen(false)}>
+                      Get started
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
