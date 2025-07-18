@@ -1,14 +1,29 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://corvex.com'
-
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/api/', '/_next/'],
-    },
-    sitemap: `${baseUrl}/sitemap.xml`,
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/admin/',
+          '/_next/',
+          '/private/',
+          '*.pdf',
+        ],
+      },
+      {
+        userAgent: 'GPTBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'CCBot',
+        disallow: '/',
+      },
+    ],
+    sitemap: 'https://corvex.com/sitemap.xml',
+    host: 'https://corvex.com',
   }
-} 
+}

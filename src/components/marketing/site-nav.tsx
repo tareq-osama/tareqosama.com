@@ -1,12 +1,10 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import Image from 'next/image';
-import { Menu, X, Zap, Users, FileText, Building, Play, Lightbulb, BookOpen, HelpCircle, User, Phone, Briefcase, ArrowRight } from 'lucide-react';
-
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,50 +12,31 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-
-const platformFeatures = [
-  {
-    title: "Client Portal",
-    href: "#features",
-    description: "White-labeled portals that transform client experience",
-    icon: <Users className="w-5 h-5" />
-  },
-  {
-    title: "AI Proposals",
-    href: "#features",
-    description: "Generate winning proposals in minutes with AI",
-    icon: <Zap className="w-5 h-5" />
-  },
-  {
-    title: "Smart Invoicing",
-    href: "#features",
-    description: "Automated invoicing that gets you paid faster",
-    icon: <FileText className="w-5 h-5" />
-  },
-  {
-    title: "Project Management",
-    href: "#features",
-    description: "Keep projects on track with powerful workflows",
-    icon: <Building className="w-5 h-5" />
-  }
-];
+} from "@/components/ui/navigation-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Menu, X, Zap, BookOpen, HelpCircle, FileText, Lightbulb } from "lucide-react";
+import { useGTM } from "@/hooks/use-gtm";
 
 const solutions = [
   {
-    title: "For Digital Agencies",
-    href: "/solutions/agencies",
-    description: "Scale your agency operations with professional tools"
+    title: "Agency Management",
+    href: "/solutions/agency",
+    description: "Complete platform for digital agencies and consultancies"
   },
   {
-    title: "For Freelancers",
-    href: "/solutions/freelancers", 
-    description: "Elevate your freelance business with client portals"
+    title: "Freelancer Tools", 
+    href: "/solutions/freelancer",
+    description: "Everything solo professionals need to scale their business"
   },
   {
-    title: "For Consultants",
-    href: "/solutions/consultants",
+    title: "Consulting Platform",
+    href: "/solutions/consulting", 
     description: "Professional consulting platform for experts"
   },
   {
@@ -94,18 +73,16 @@ const resources = [
   }
 ];
 
-
-
 export default function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-
+  const { trackButtonClick, trackEvent } = useGTM();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      trackEvent('scroll_to_section', { section_id: id });
     }
     setIsMobileMenuOpen(false);
   };
@@ -114,16 +91,41 @@ export default function Navbar() {
     if (href.startsWith('#')) {
       const id = href.substring(1);
       scrollToSection(id);
+    } else {
+      trackButtonClick('Navigation Link', 'navbar', href);
+    }
+  };
+
+  const handleGetStartedClick = () => {
+    trackButtonClick('Get Started', 'navbar');
+    trackEvent('cta_click', { 
+      button_text: 'Get Started',
+      location: 'navbar'
+    });
+  };
+
+  const handleLoginClick = () => {
+    trackButtonClick('Login', 'navbar');
+  };
+
+  const handleLogoClick = () => {
+    trackButtonClick('Logo', 'navbar', '/');
+  };
+
+  const handleMobileMenuToggle = (isOpen: boolean) => {
+    setIsMobileMenuOpen(isOpen);
+    if (isOpen) {
+      trackEvent('mobile_menu_open');
     }
   };
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md ">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
-            <Link href="/" className="relative w-32 h-8">
+            <Link href="/" className="relative w-32 h-8" onClick={handleLogoClick}>
               <Image
                 src="/corvexlogo.svg"
                 alt="Corvex - Professional Agency Platform"
@@ -150,6 +152,7 @@ export default function Navbar() {
                             <Link
                               className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-white/10 to-white/20 p-6 no-underline outline-none focus:shadow-md border border-white/20"
                               href="/"
+                              onClick={() => handleNavigation('/')}
                             >
                               <Zap className="h-6 w-6 text-white" />
                               <div className="mb-2 mt-4 text-lg font-medium text-white">
@@ -161,30 +164,23 @@ export default function Navbar() {
                             </Link>
                           </NavigationMenuLink>
                         </li>
-                        {platformFeatures.map((feature) => (
-                          <ListItem key={feature.title} title={feature.title} href={feature.href} icon={feature.icon}>
-                            {feature.description}
-                          </ListItem>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-
-                  {/* Solutions Menu */}
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-transparent text-zinc-300 hover:text-white data-[state=open]:text-white">
-                      Solutions
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                        {solutions.map((solution) => (
-                          <ListItem
-                            key={solution.title}
-                            title={solution.title}
-                            href={solution.href}
-                          >
-                            {solution.description}
-                          </ListItem>
+                        {solutions.map((item) => (
+                          <li key={item.title}>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                href={item.href}
+                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white"
+                                onClick={() => handleNavigation(item.href)}
+                              >
+                                <div className="text-sm font-medium leading-none text-white">
+                                  {item.title}
+                                </div>
+                                <p className="line-clamp-2 text-sm leading-snug text-zinc-400">
+                                  {item.description}
+                                </p>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
                         ))}
                       </ul>
                     </NavigationMenuContent>
@@ -197,203 +193,184 @@ export default function Navbar() {
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                        {resources.map((resource) => (
-                          <ListItem
-                            key={resource.title}
-                            title={resource.title}
-                            href={resource.href}
-                            icon={resource.icon}
-                          >
-                            {resource.description}
-                          </ListItem>
+                        {resources.map((item) => (
+                          <li key={item.title}>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                href={item.href}
+                                className="flex items-center select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white"
+                                onClick={() => handleNavigation(item.href)}
+                              >
+                                <div className="mr-3 text-zinc-400">
+                                  {item.icon}
+                                </div>
+                                <div>
+                                  <div className="text-sm font-medium leading-none text-white">
+                                    {item.title}
+                                  </div>
+                                  <p className="line-clamp-2 text-sm leading-snug text-zinc-400 mt-1">
+                                    {item.description}
+                                  </p>
+                                </div>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
                         ))}
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
 
-                  {/* Direct Links */}
+                  {/* Pricing */}
                   <NavigationMenuItem>
-                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                      <button 
-                        onClick={() => handleNavigation('#pricing')}
-                        className="bg-transparent text-zinc-300 hover:text-white"
-                      >
-                        Pricing
-                      </button>
-                    </NavigationMenuLink>
+                    <Link 
+                      href="/pricing" 
+                      className="text-zinc-300 hover:text-white transition-colors px-4 py-2 text-sm font-medium"
+                      onClick={() => handleNavigation('/pricing')}
+                    >
+                      Pricing
+                    </Link>
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
 
             {/* Desktop CTA Buttons */}
-            <div className="hidden lg:flex items-center gap-4">
-              <Link
-                href="https://app.usecorvex.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-zinc-300 hover:text-white transition-colors"
-              >
-                Login
+            <div className="hidden lg:flex items-center space-x-4">
+              <Link href="/login">
+                <Button 
+                  variant="ghost" 
+                  className="text-zinc-300 hover:text-white hover:bg-white/10"
+                  onClick={handleLoginClick}
+                >
+                  Login
+                </Button>
               </Link>
-              <button
-                onClick={() => handleNavigation('#pricing')}
-                className="text-sm font-medium text-black bg-white hover:bg-zinc-200 px-4 py-2 rounded-lg transition-colors group"
-              >
-                Get Started Free
-                <ArrowRight className="ml-1 w-4 h-4 inline group-hover:translate-x-0.5 transition-transform" />
-              </button>
+              <Link href="/signup">
+                <Button 
+                  className="bg-white text-black hover:bg-zinc-200 transition-colors"
+                  onClick={handleGetStartedClick}
+                >
+                  Get Started
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-white hover:bg-white/10 rounded-full transition-colors"
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
+            <div className="lg:hidden">
+              <Sheet open={isMobileMenuOpen} onOpenChange={handleMobileMenuToggle}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="text-zinc-300 hover:text-white hover:bg-white/10">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Toggle menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-full sm:w-[400px] bg-black border-zinc-800">
+                  <SheetHeader>
+                    <SheetTitle className="text-left">
+                      <div className="relative w-24 h-6">
+                        <Image
+                          src="/corvexlogo.svg"
+                          alt="Corvex"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    </SheetTitle>
+                  </SheetHeader>
+                  
+                  <div className="mt-8 space-y-6">
+                    {/* Mobile Platform Links */}
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-4">Platform</h3>
+                      <div className="space-y-3">
+                        {solutions.map((item) => (
+                          <Link
+                            key={item.title}
+                            href={item.href}
+                            className="block py-2 text-zinc-300 hover:text-white transition-colors"
+                            onClick={() => {
+                              handleNavigation(item.href);
+                              setIsMobileMenuOpen(false);
+                            }}
+                          >
+                            <div className="font-medium">{item.title}</div>
+                            <div className="text-sm text-zinc-500">{item.description}</div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Mobile Resources Links */}
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
+                      <div className="space-y-3">
+                        {resources.map((item) => (
+                          <Link
+                            key={item.title}
+                            href={item.href}
+                            className="flex items-center py-2 text-zinc-300 hover:text-white transition-colors"
+                            onClick={() => {
+                              handleNavigation(item.href);
+                              setIsMobileMenuOpen(false);
+                            }}
+                          >
+                            <div className="mr-3 text-zinc-400">
+                              {item.icon}
+                            </div>
+                            <div>
+                              <div className="font-medium">{item.title}</div>
+                              <div className="text-sm text-zinc-500">{item.description}</div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Mobile Pricing */}
+                    <Link 
+                      href="/pricing" 
+                      className="block py-2 text-zinc-300 hover:text-white transition-colors font-medium"
+                      onClick={() => {
+                        handleNavigation('/pricing');
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      Pricing
+                    </Link>
+
+                    {/* Mobile CTA Buttons */}
+                    <div className="pt-6 space-y-4 border-t border-zinc-800">
+                      <Link href="/login" className="block">
+                        <Button 
+                          variant="outline" 
+                          className="w-full border-zinc-700 text-zinc-300 hover:text-white hover:bg-white/10"
+                          onClick={() => {
+                            handleLoginClick();
+                            setIsMobileMenuOpen(false);
+                          }}
+                        >
+                          Login
+                        </Button>
+                      </Link>
+                      <Link href="/signup" className="block">
+                        <Button 
+                          className="w-full bg-white text-black hover:bg-zinc-200"
+                          onClick={() => {
+                            handleGetStartedClick();
+                            setIsMobileMenuOpen(false);
+                          }}
+                        >
+                          Get Started
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 lg:hidden"
-          >
-            <div className="absolute inset-0 bg-black/90 backdrop-blur-md" />
-            <div className="relative min-h-screen flex flex-col pt-20 px-6">
-              <nav className="flex flex-col gap-6">
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-white">Platform</h3>
-                  {platformFeatures.map((feature) => (
-                    <button
-                      key={feature.title}
-                      onClick={() => handleNavigation(feature.href)}
-                      className="flex items-start gap-3 text-left w-full p-2 hover:bg-zinc-800/50 rounded-lg transition-colors"
-                    >
-                      <div className="text-white mt-0.5">{feature.icon}</div>
-                      <div>
-                        <div className="text-white font-medium">{feature.title}</div>
-                        <div className="text-sm text-zinc-400">{feature.description}</div>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-white">Quick Links</h3>
-                  <button
-                    onClick={() => handleNavigation('#pricing')}
-                    className="text-left text-zinc-300 hover:text-white transition-colors"
-                  >
-                    Pricing
-                  </button>
-                  <Link
-                    href="/case-studies"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-zinc-300 hover:text-white transition-colors"
-                  >
-                    Case Studies
-                  </Link>
-                  <Link
-                    href="/help"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-zinc-300 hover:text-white transition-colors"
-                  >
-                    Help Center
-                  </Link>
-                </div>
-              </nav>
-
-              <div className="flex flex-col gap-4 mt-8 pt-6 border-t border-zinc-800">
-                <Link
-                  href="https://app.usecorvex.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-center text-sm font-medium text-zinc-300 hover:text-white px-4 py-3 transition-colors"
-                >
-                  Login
-                </Link>
-                                  <button
-                    onClick={() => {
-                      handleNavigation('#pricing');
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className="text-center text-sm font-medium text-black bg-white hover:bg-zinc-200 px-4 py-3 rounded-lg transition-colors"
-                  >
-                    Get Started Free
-                  </button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </>
-  );
-}
-
-function ListItem({
-  title,
-  children,
-  href,
-  icon,
-  ...props
-}: React.ComponentPropsWithoutRef<"li"> & { 
-  href: string;
-  icon?: React.ReactNode;
-}) {
-  const handleClick = () => {
-    if (href.startsWith('#')) {
-      const id = href.substring(1);
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-
-  return (
-    <li {...props}>
-      <NavigationMenuLink asChild>
-        {href.startsWith('#') ? (
-          <button
-            onClick={handleClick}
-            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-zinc-800/50 focus:bg-zinc-800/50 w-full text-left"
-          >
-            <div className="flex items-center gap-2">
-              {icon && <span className="text-white">{icon}</span>}
-              <div className="text-sm font-medium leading-none text-white">{title}</div>
-            </div>
-            <p className="line-clamp-2 text-sm leading-snug text-zinc-400">
-              {children}
-            </p>
-          </button>
-        ) : (
-          <Link
-            href={href}
-            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-zinc-800/50 focus:bg-zinc-800/50"
-          >
-            <div className="flex items-center gap-2">
-              {icon && <span className="text-white">{icon}</span>}
-              <div className="text-sm font-medium leading-none text-white">{title}</div>
-            </div>
-            <p className="line-clamp-2 text-sm leading-snug text-zinc-400">
-              {children}
-            </p>
-          </Link>
-        )}
-      </NavigationMenuLink>
-    </li>
   );
 }
