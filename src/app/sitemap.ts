@@ -21,12 +21,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/security',
   ]
 
-  const staticPages = routes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === '' ? 'daily' : route === '/blog' ? 'weekly' : 'monthly' as const,
-    priority: route === '' ? 1 : route === '/pricing' || route === '/features' ? 0.9 : 0.8,
-  }))
+  const staticPages = routes.map((route) => {
+    let changeFreq: 'daily' | 'weekly' | 'monthly' = 'monthly';
+    if (route === '') changeFreq = 'daily';
+    else if (route === '/blog') changeFreq = 'weekly';
+    
+    return {
+      url: `${baseUrl}${route}`,
+      lastModified: new Date(),
+      changeFrequency: changeFreq,
+      priority: route === '' ? 1 : route === '/pricing' || route === '/features' ? 0.9 : 0.8,
+    };
+  })
 
   // Add blog posts (you would fetch these from your CMS/database)
   const blogPosts = [
