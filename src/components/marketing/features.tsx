@@ -58,27 +58,34 @@ export default function FeaturesSlider() {
       
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center pt-24 pb-16 lg:pt-32 lg:pb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
-          >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/50 border border-zinc-700">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-zinc-300 tracking-wide">Features</span>
-            </div>
-            
-                          <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
-              Where agency management
-              <span className="block mt-2 text-zinc-300">becomes effortless</span>
-            </h2>
-            
-            <p className="text-lg lg:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-              Powerful tools designed specifically for modern agencies to streamline operations and delight clients.
-            </p>
-          </motion.div>
+        <div className="text-center ">
+          {/*
+            English:
+            This section renders the animated header for the features slider, including a badge, headline, and description.
+            Arabic:
+            هذا القسم يعرض رأس متحرك لشريط الميزات، ويتضمن شارة وعنوانًا ووصفًا.
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/50 border border-zinc-700">
+                <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                <span className="text-sm font-medium text-zinc-300 tracking-wide">Features</span>
+              </div>
+              
+              <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
+                Where agency management
+                <span className="block mt-2 text-zinc-300">becomes effortless</span>
+              </h2>
+              
+              <p className="text-lg lg:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+                Powerful tools designed specifically for modern agencies to streamline operations and delight clients.
+              </p>
+            </motion.div>
+          */}
         </div>
 
         {/* Current Feature Info */}

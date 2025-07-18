@@ -11,7 +11,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background/90" />
-        <div className="relative items-center justify-center flex-col mx-auto px-6 py-24 text-center">
+        <div className="relative items-center justify-center flex-col mx-auto px-6 h-svh flex text-center">
           {/* Small label above headline */}
           <p className="text-sm text-muted-foreground mb-8 font-medium tracking-wide">
             From solo to scale
@@ -31,8 +31,8 @@ export default function HomePage() {
 
           {/* Subtitle */}
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-            Accept payments, manage tasks, and communicate with your clients with your
-            very own white-labeled client portal. <span className="font-semibold text-foreground">5-min setup, ready to go this afternoon.</span>
+Create invoices, manage tasks, and communicate with your clients with your
+            very own white-labeled client portal. <span className="font-semibold text-foreground">5-min setup, <span> <br></br> ready to go this afternoon.</span></span>
           </p>
           
           {/* CTA buttons */}
@@ -47,6 +47,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <FeaturesSlider/>
+
+
 
       {/* Trusted By Section with Dashboard Preview */}
       <section className="w-full py-16 border-t border-border/20">
@@ -277,13 +281,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="w-full py-24">
-
-      <FeaturesSlider/>
-
-
-      </section>
-
+     
 
       {/* How It Works Process Section */}
       <section className="w-full py-24 bg-muted/30">
