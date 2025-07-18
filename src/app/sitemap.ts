@@ -21,21 +21,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/security',
   ]
 
-  const staticPages = routes.map((route) => {
-    let changeFreq: 'daily' | 'weekly' | 'monthly' = 'monthly';
-    if (route === '') changeFreq = 'daily';
-    else if (route === '/blog') changeFreq = 'weekly';
-    
-    return {
-      url: `${baseUrl}${route}`,
-      lastModified: new Date(),
-      changeFrequency: changeFreq,
-      priority: route === '' ? 1 : route === '/pricing' || route === '/features' ? 0.9 : 0.8,
-    };
-  })
+  const staticPages: MetadataRoute.Sitemap = routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: route === '' ? 'daily' as const : route === '/blog' ? 'weekly' as const : 'monthly' as const,
+    priority: route === '' ? 1 : route === '/pricing' || route === '/features' ? 0.9 : 0.8,
+  }))
 
   // Add blog posts (you would fetch these from your CMS/database)
-  const blogPosts = [
+  const blogPosts: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/blog/how-to-streamline-client-communication`,
       lastModified: new Date('2024-07-15'),
@@ -52,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   // Add case studies
-  const caseStudies = [
+  const caseStudies: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/case-studies/velocity-digital`,
       lastModified: new Date('2024-07-01'),
