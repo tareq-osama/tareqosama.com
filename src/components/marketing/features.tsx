@@ -1,17 +1,16 @@
 "use client"
 
 // Features.tsx
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { Swiper as SwiperType } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, EffectCoverflow } from 'swiper/modules';
+import { EffectCoverflow } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import 'swiper/css/navigation';
 
 interface Feature {
   id: string;
@@ -49,45 +48,61 @@ const features: Feature[] = [
 
 export default function FeaturesSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [swiper, setSwiper] = useState<SwiperType | null>(null);
+  const swiperRef = useRef<SwiperType>();
+
+  const goToPrev = () => {
+    if (swiperRef.current) {
+      const newIndex = currentIndex > 0 ? currentIndex - 1 : features.length - 1;
+      swiperRef.current.slideTo(newIndex);
+      setCurrentIndex(newIndex);
+    }
+  };
+
+  const goToNext = () => {
+    if (swiperRef.current) {
+      const newIndex = currentIndex < features.length - 1 ? currentIndex + 1 : 0;
+      swiperRef.current.slideTo(newIndex);
+      setCurrentIndex(newIndex);
+    }
+  };
+
+  const goToSlide = (index: number) => {
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(index);
+      setCurrentIndex(index);
+    }
+  };
 
   return (
     <section className="relative w-full bg-background overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0" />
+      <div className="" />
       
-      <div className="relative max-w-[1400px] mx-auto px-6 lg:px-8">
-        {/* Header Section */}
-        <div className="text-center ">
-          {/*
-            English:
-            This section renders the animated header for the features slider, including a badge, headline, and description.
-            Arabic:
-            هذا القسم يعرض رأس متحرك لشريط الميزات، ويتضمن شارة وعنوانًا ووصفًا.
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/50 border border-zinc-700">
-                <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-zinc-300 tracking-wide">Features</span>
-              </div>
-              
-              <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
-                Where agency management
-                <span className="block mt-2 text-zinc-300">becomes effortless</span>
-              </h2>
-              
-              <p className="text-lg lg:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-                Powerful tools designed specifically for modern agencies to streamline operations and delight clients.
-              </p>
-            </motion.div>
-          */}
+      <div className="relative max-w-[1400px] mx-auto ">
+        {/* Header Section 
+        <div className="text-center pt-24 pb-16 lg:pt-32 lg:pb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-6"
+          >
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/50 border border-zinc-700">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+              <span className="text-sm font-medium text-zinc-300 tracking-wide">FEATURES</span>
+            </div>
+            
+            <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
+              Where agency management
+              <span className="block mt-2 text-zinc-300">becomes effortless</span>
+            </h2>
+            
+            <p className="text-lg lg:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+              Powerful tools designed specifically for modern agencies to streamline operations and delight clients.
+            </p>
+          </motion.div>
         </div>
-
+              */}
         {/* Current Feature Info */}
         <motion.div 
           key={currentIndex}
@@ -104,18 +119,22 @@ export default function FeaturesSlider() {
           </h3>
         </motion.div>
 
-
         {/* Swiper Section */}
         <div className="relative mb-16">
           <Swiper
-            onSwiper={setSwiper}
-            onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            onSlideChange={(swiper) => {
+              setCurrentIndex(swiper.activeIndex);
+            }}
             grabCursor
             spaceBetween={50}
             centeredSlides
             loop={false}
             slidesPerView="auto"
-            modules={[EffectCoverflow, Navigation]}
+            modules={[EffectCoverflow]}
+            allowTouchMove={true}
             className="features-swiper"
           >
             {features.map((feature, index) => (
@@ -141,7 +160,7 @@ export default function FeaturesSlider() {
       </div>
 
       {/* Navigation Section */}
-      <div className="">
+      <div className=" backdrop-blur-sm">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between py-8 gap-6">
             {/* Feature Tabs */}
@@ -150,7 +169,7 @@ export default function FeaturesSlider() {
                 {features.map((feature, index) => (
                   <button
                     key={feature.id}
-                    onClick={() => swiper?.slideTo(index)}
+                    onClick={() => goToSlide(index)}
                     className={`
                       relative text-sm font-medium whitespace-nowrap transition-all duration-300 py-2 px-1 flex-shrink-0
                       ${index === currentIndex 
@@ -168,15 +187,15 @@ export default function FeaturesSlider() {
             {/* Navigation Arrows */}
             <div className="flex gap-3 flex-shrink-0">
               <button 
-                onClick={() => swiper?.slidePrev()}
-                className="p-3 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white transition-colors duration-200 border border-zinc-700"
+                onClick={goToPrev}
+                className="p-3 rounded-full bg-primary/10 hover:bg-primary/30 text-foreground  transition-colors duration-200 border border-primary/30 shadow-lg"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
-                onClick={() => swiper?.slideNext()}
-                className="p-3 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white transition-colors duration-200 border border-zinc-700"
+                onClick={goToNext}
+                className="p-3 rounded-full bg-primary/10 hover:bg-primary/30 text-foreground  transition-colors duration-200 border border-primary/30 shadow-lg"
                 aria-label="Next slide"
               >
                 <ChevronRight className="w-5 h-5" />
