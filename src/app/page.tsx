@@ -10,23 +10,23 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background/90" />
+        <div className=" pt-6 bg-gradient-to-b from-background via-background/95 to-background/90" />
         <div className="relative items-center justify-center flex-col mx-auto px-6 h-svh flex text-center">
           {/* Small label above headline */}
-          <p className="text-sm text-muted-foreground mb-8 font-medium tracking-wide">
-            
+          <p className="text-sm  text-muted-foreground mb-8 font-medium tracking-wide">
+          Hi, This is Tareq
           </p>
           
           {/* Main headline */}
           <div className="flex flex-col items-center justify-center">
-          <h1 className=" text-start text-6xl md:text-6xl font-bold text-foreground leading-[1.1] mb-8 tracking-tight">
+          <h1 className="   text-start text-6xl md:text-6xl font-bold text-foreground mb-8 tracking-tight">
           Digital Designer 
           & Web Developer
           </h1>
           </div>
 
           {/* Subtitle */}
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className=" text-left md:text-center text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
           Tareq is a Digital Designer and Web Developer, focused on merging web technologies, AI, marketing and branding strategies to build innovative solutions that drive business growth and elevate brands presence.
 
           </p>

@@ -160,12 +160,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
       <head>
+
+     {/* Tailwind CSS */}
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
         {/* Google Tag Manager - HEAD */}
         <GoogleTagManager />
         
         {/* Google Search Console Verification */}
-        <meta name="google-site-verification" content="your-google-verification-code-here" />
+        <meta  name="google-site-verification" content="your-google-verification-code-here" />
         
+
+     
         <Script
           id="structured-data"
           type="application/ld+json"
