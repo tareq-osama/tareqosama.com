@@ -17,7 +17,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://corvex.com'),
+  metadataBase: new URL('https://tareqosama.com'),
   title: {
     default: "Corvex - All-in-One Client Portal for One-Person Businesses",
     template: "%s | Corvex"
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "business automation",
     "client dashboard"
   ],
-  authors: [{ name: "Corvex Team", url: "https://corvex.com" }],
+  authors: [{ name: "Corvex Team", url: "https://tareqosama.com" }],
   creator: "Corvex",
   publisher: "Corvex Inc.",
   formatDetection: {
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://corvex.com",
+    url: "https://tareqosama.com",
     title: "Corvex - All-in-One Client Portal for One-Person Businesses",
     description: "Transform your one-person business with Corvex's complete client management platform. Streamline communication, automate billing, and grow your revenue.",
     siteName: "Corvex",
     images: [
       {
-        url: "https://corvex.com/og-image.jpg",
+        url: "https://tareqosama.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Corvex - Client Portal Platform",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Corvex - All-in-One Client Portal",
     description: "Transform your one-person business with our complete client management platform.",
     creator: "@corvex",
-    images: ["https://corvex.com/twitter-image.jpg"],
+    images: ["https://tareqosama.com/twitter-image.jpg"],
   },
   robots: {
     index: true,
@@ -117,9 +117,9 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://corvex.com",
+    canonical: "https://tareqosama.com",
     languages: {
-      "en-US": "https://corvex.com",
+      "en-US": "https://tareqosama.com",
     },
   },
 }
@@ -131,8 +131,8 @@ const jsonLd = {
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   description: "All-in-one client portal and business management platform for one-person businesses",
-  url: "https://corvex.com",
-  screenshot: "https://corvex.com/screenshot.jpg",
+  url: "https://tareqosama.com",
+  screenshot: "https://tareqosama.com/screenshot.jpg",
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
@@ -148,7 +148,7 @@ const jsonLd = {
   creator: {
     "@type": "Organization",
     name: "Corvex Inc.",
-    url: "https://corvex.com"
+    url: "https://tareqosama.com"
   }
 }
 

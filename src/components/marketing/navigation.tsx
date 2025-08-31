@@ -139,115 +139,15 @@ export default function Navigation() {
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/corvexlogo.svg" alt="Corvex Logo" width={150} height={100} />
+              <Image src="/tareq-logo.svg" alt="Corvex Logo" width={80} height={100} />
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              <NavigationMenu>
-                <NavigationMenuList className="space-x-6">
-                  {/* Features */}
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-muted-foreground hover:text-foreground transition-colors">
-                      Features
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="w-80 p-4">
-                        <div className="space-y-3">
-                          {features.map((feature) => (
-                            <Link
-                              key={feature.href}
-                              href={feature.href}
-                              className="group block rounded-lg p-3 hover:bg-muted/50 transition-colors">
-                              <div className="font-medium text-foreground group-hover:text-primary transition-colors">
-                                {feature.title}
-                              </div>
-                              <div className="text-sm text-muted-foreground mt-1">
-                                {feature.description}
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-
-                  {/* Solutions */}
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-muted-foreground hover:text-foreground transition-colors">
-                      Solutions
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="w-80 p-4">
-                        <div className="space-y-3">
-                          {solutions.map((solution) => (
-                            <Link
-                              key={solution.href}
-                              href={solution.href}
-                              className="group block rounded-lg p-3 hover:bg-muted/50 transition-colors">
-                              <div className="font-medium text-foreground group-hover:text-primary transition-colors">
-                                {solution.title}
-                              </div>
-                              <div className="text-sm text-muted-foreground mt-1">
-                                {solution.description}
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-
-                  {/* Resources */}
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-muted-foreground hover:text-foreground transition-colors">
-                      Resources
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="w-80 p-4">
-                        <div className="space-y-3">
-                          {resources.map((resource) => (
-                            <Link
-                              key={resource.href}
-                              href={resource.href}
-                              className="group block rounded-lg p-3 hover:bg-muted/50 transition-colors">
-                              <div className="font-medium text-foreground group-hover:text-primary transition-colors">
-                                {resource.title}
-                              </div>
-                              <div className="text-sm text-muted-foreground mt-1">
-                                {resource.description}
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-
-                  {/* Pricing */}
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/pricing"
-                        className={cn(
-                          "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-transparent focus:bg-transparent focus:text-foreground disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-transparent data-[state=open]:bg-transparent transition-colors"
-                        )}
-                      >
-                        Pricing
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-            </div>
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center space-x-4">
-              <Button variant="ghost" size="sm" asChild>
-                <Link href="https://app.usecorvex.com">Login</Link>
-              </Button>
+              
               <Button size="sm" asChild>
-                <Link href="https://app.usecorvex.com/signup">Get started</Link>
+                <Link href="https://tareqosama.com/contact">Let's work together</Link>
               </Button>
             </div>
 
