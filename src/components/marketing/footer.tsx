@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
           
           <p className="text-sm text-muted-foreground">
-            © 2025 Corvex. All rights reserved.
+            © 2025 tareqosama.com. All rights reserved.
           </p>
         </div>
       </div>
