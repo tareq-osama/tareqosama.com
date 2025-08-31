@@ -29,7 +29,7 @@ export default function IntegrationsPage() {
 
           {/* Subtitle */}
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-            Integrate Corvex with your existing workflow. 
+            Integrate Tareq with your existing workflow. 
             <span className="font-semibold text-foreground"> Connect to 100+ apps and automate your business processes.</span>
           </p>
           
@@ -78,7 +78,7 @@ export default function IntegrationsPage() {
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Webhooks</h3>
                 <p className="text-sm text-muted-foreground">
-                  Get real-time notifications when events happen in your Corvex account.
+                  Get real-time notifications when events happen in your Tareq account.
                 </p>
               </CardContent>
             </Card>
@@ -171,7 +171,7 @@ export default function IntegrationsPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-6">
-              Why integrate with Corvex?
+              Why integrate with Tareq?
             </h2>
             <p className="text-lg text-muted-foreground">
               Build a connected ecosystem that works for your business.

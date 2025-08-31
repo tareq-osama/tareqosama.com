@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const faqItems = [
   {
-    question: "How quickly can I set up Corvex for my business?",
+    question: "How quickly can I set up Tareq for my business?",
     answer: "Most businesses are up and running in under 5 minutes. Our setup wizard guides you through creating your first client portal, and you can invite clients immediately."
   },
   {
@@ -29,7 +29,7 @@ const faqItems = [
   },
   {
     question: "Do you integrate with tools we're already using?",
-    answer: "Yes! Corvex integrates with popular tools like Slack, Trello, Asana, QuickBooks, and more. We also have a robust API for custom integrations."
+    answer: "Yes! Tareq integrates with popular tools like Slack, Trello, Asana, QuickBooks, and more. We also have a robust API for custom integrations."
   }
 ];
 
@@ -49,7 +49,7 @@ const supportCategories = [
   {
     icon: FileText,
     title: "Documentation",
-    description: "Complete reference for all Corvex features",
+    description: "Complete reference for all Tareq features",
     link: "/docs"
   },
   {
@@ -145,7 +145,7 @@ export default function HelpPage() {
               Frequently asked questions
             </h2>
             <p className="text-lg text-muted-foreground">
-              Get answers to the most common questions about Corvex
+              Get answers to the most common questions about Tareq
             </p>
           </div>
           

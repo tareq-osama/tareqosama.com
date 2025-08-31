@@ -176,7 +176,7 @@ export default function Pricing() {
               Frequently asked questions
             </h3>
             <p className="text-zinc-400">
-              Get answers to common questions about Corvex
+              Get answers to common questions about Tareq
             </p>
           </div>
 

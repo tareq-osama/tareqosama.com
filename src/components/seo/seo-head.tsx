@@ -11,15 +11,15 @@ interface SEOProps {
 }
 
 export default function SEOHead({
-  title = "Corvex - All-in-One Client Portal",
-  description = "Transform your one-person business with Corvex's complete client management platform.",
+  title = "Tareq - All-in-One Client Portal",
+  description = "Transform your one-person business with Tareq's complete client management platform.",
   canonical,
-  ogImage = "https://corvex.com/og-image.jpg",
+  ogImage = "https://tareqosama.com/og-image.jpg",
   ogType = "website",
   noindex = false,
   schema
 }: SEOProps) {
-  const fullTitle = title.includes('Corvex') ? title : `${title} | Corvex`
+  const fullTitle = title.includes('Tareq') ? title : `${title} | Tareq`
   
   return (
     <Head>
@@ -34,7 +34,7 @@ export default function SEOHead({
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonical || "https://corvex.com"} />
+              <meta property="og:url" content={canonical || "https://tareqosama.com"} />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

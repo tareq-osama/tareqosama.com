@@ -19,10 +19,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://tareqosama.com'),
   title: {
-    default: "Corvex - All-in-One Client Portal for One-Person Businesses",
-    template: "%s | Corvex"
+    default: "Tareq - All-in-One Client Portal for One-Person Businesses",
+    template: "%s | Tareq"
   },
-  description: "Corvex is the complete client management platform for one-person businesses. Streamline client communication, automate invoicing, track projects, and grow your revenue with our all-in-one solution.",
+  description: "Tareq is the complete client management platform for one-person businesses. Streamline client communication, automate invoicing, track projects, and grow your revenue with our all-in-one solution.",
   keywords: [
     "client portal",
     "business management software",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "business automation",
     "client dashboard"
   ],
-  authors: [{ name: "Corvex Team", url: "https://tareqosama.com" }],
-  creator: "Corvex",
-  publisher: "Corvex Inc.",
+  authors: [{ name: "Tareq Team", url: "https://tareqosama.com" }],
+  creator: "Tareq",
+  publisher: "Tareq Inc.",
   formatDetection: {
     email: false,
     address: false,
@@ -49,23 +49,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://tareqosama.com",
-    title: "Corvex - All-in-One Client Portal for One-Person Businesses",
-    description: "Transform your one-person business with Corvex's complete client management platform. Streamline communication, automate billing, and grow your revenue.",
-    siteName: "Corvex",
+    title: "Tareq - All-in-One Client Portal for One-Person Businesses",
+    description: "Transform your one-person business with Tareq's complete client management platform. Streamline communication, automate billing, and grow your revenue.",
+    siteName: "Tareq",
     images: [
       {
         url: "https://tareqosama.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Corvex - Client Portal Platform",
+        alt: "Tareq - Client Portal Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Corvex - All-in-One Client Portal",
+    title: "Tareq - All-in-One Client Portal",
     description: "Transform your one-person business with our complete client management platform.",
-    creator: "@corvex",
+    creator: "@tareq",
     images: ["https://tareqosama.com/twitter-image.jpg"],
   },
   robots: {
@@ -127,7 +127,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Corvex",
+  name: "Tareq",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   description: "All-in-one client portal and business management platform for one-person businesses",
@@ -147,7 +147,7 @@ const jsonLd = {
   },
   creator: {
     "@type": "Organization",
-    name: "Corvex Inc.",
+    name: "Tareq Inc.",
     url: "https://tareqosama.com"
   }
 }

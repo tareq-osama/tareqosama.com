@@ -36,7 +36,7 @@ const testimonials = [
     company: "Velocity Digital",
     revenue: "$2.1M ARR",
     image: "/api/placeholder/60/60",
-    quote: "I was bleeding money on manual processes and unprofessional client experiences. Corvex saved my agency. We went from struggling to scale past $500K to hitting $2.1M in 18 months. My clients actually BEG me to work with them now.",
+            quote: "I was bleeding money on manual processes and unprofessional client experiences. Tareq saved my agency. We went from struggling to scale past $500K to hitting $2.1M in 18 months. My clients actually BEG me to work with them now.",
     results: "+320% revenue growth",
     featured: true
   },
@@ -46,7 +46,7 @@ const testimonials = [
     company: "Digital Spark",
     revenue: "$1.2M ARR",
     image: "/api/placeholder/60/60",
-    quote: "The day I switched to Corvex was the day I stopped losing sleep over client management. My team productivity doubled, client complaints disappeared, and I finally started charging what I'm worth.",
+            quote: "The day I switched to Tareq was the day I stopped losing sleep over client management. My team productivity doubled, client complaints disappeared, and I finally started charging what I'm worth.",
     results: "Doubled team productivity"
   },
   {
@@ -55,7 +55,7 @@ const testimonials = [
     company: "Apex Creative",
     revenue: "$850K ARR",
     image: "/api/placeholder/60/60",
-    quote: "Corvex didn't just organize my chaos—it transformed my entire business model. I went from firefighting daily crises to strategic growth planning. Best investment I've ever made.",
+            quote: "Tareq didn't just organize my chaos—it transformed my entire business model. I went from firefighting daily crises to strategic growth planning. Best investment I've ever made.",
     results: "Zero daily crises"
   },
   {
@@ -64,7 +64,7 @@ const testimonials = [
     company: "Growth Labs",
     revenue: "$1.8M ARR",
     image: "/api/placeholder/60/60",
-    quote: "My agency was drowning in spreadsheets and missed deadlines. 6 months with Corvex later: $1.8M revenue, 95% on-time delivery, and clients who refer us constantly. This platform literally saved my business from failure.",
+            quote: "My agency was drowning in spreadsheets and missed deadlines. 6 months with Tareq later: $1.8M revenue, 95% on-time delivery, and clients who refer us constantly. This platform literally saved my business from failure.",
     results: "95% on-time delivery",
     success: true
   }
@@ -307,7 +307,7 @@ export default function SocialProof() {
             </h3>
             <p className="text-zinc-400 max-w-2xl mx-auto">
               Join the elite group of agencies that have transformed their operations 
-              and <span className="text-white font-semibold">multiplied their revenue</span> with Corvex.
+              and <span className="text-white font-semibold">multiplied their revenue</span> with Tareq.
             </p>
           </div>
           

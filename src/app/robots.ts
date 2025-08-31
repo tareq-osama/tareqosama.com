@@ -23,7 +23,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/',
       },
     ],
-    sitemap: 'https://corvex.com/sitemap.xml',
-    host: 'https://corvex.com',
+      sitemap: 'https://tareqosama.com/sitemap.xml',
+  host: 'https://tareqosama.com',
   }
 }

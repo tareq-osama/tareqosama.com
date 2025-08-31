@@ -94,7 +94,7 @@ export default function Hero() {
               {/* Testimonial Quote */}
               <div className="card-minimal p-6">
                 <p className="text-zinc-300 mb-3">
-                  "Corvex transformed my chaotic agency into a streamlined operation. 
+                  "Tareq transformed my chaotic agency into a streamlined operation. 
                   My clients actually thank me for the professional experience now."
                 </p>
                 <div className="text-sm">
@@ -116,8 +116,8 @@ export default function Hero() {
               {/* Main Dashboard Image */}
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800">
                 <Image
-                  src="/corvex-dashboard.jpg"
-                  alt="Corvex Agency Dashboard"
+                                  src="/corvex-dashboard.jpg"
+                alt="Tareq Agency Dashboard"
                   fill
                   className="object-cover"
                   priority

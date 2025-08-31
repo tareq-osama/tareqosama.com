@@ -139,7 +139,7 @@ export default function ConsultantsPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-6">
-              Why consultants choose Corvex?
+              Why consultants choose Tareq?
             </h2>
             <p className="text-lg text-muted-foreground">
               Built by consultants, for consultants.
@@ -186,7 +186,7 @@ export default function ConsultantsPage() {
       <section className="w-full py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-2xl md:text-3xl font-bold text-foreground mb-8 leading-relaxed italic">
-            "Corvex has transformed how I deliver consulting services. My clients love the professional portal, 
+            "Tareq has transformed how I deliver consulting services. My clients love the professional portal, 
             and I can focus on delivering value instead of managing tools."
           </p>
           <div className="flex items-center justify-center gap-3">
@@ -264,7 +264,7 @@ export default function ConsultantsPage() {
             Ready to elevate your consulting practice?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Join hundreds of consultants using Corvex to deliver exceptional client experiences.
+            Join hundreds of consultants using Tareq to deliver exceptional client experiences.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

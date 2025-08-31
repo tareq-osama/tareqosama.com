@@ -66,7 +66,7 @@ export default function AgenciesPage() {
             
             <p className="text-lg lg:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
               Transform your agency from scattered spreadsheets to professional powerhouse. 
-              <span className="text-white font-semibold"> 800+ agencies already scaled with Corvex</span> - 
+              <span className="text-white font-semibold"> 800+ agencies already scaled with Tareq</span> - 
               average revenue growth of 289%.
             </p>
 
@@ -213,7 +213,7 @@ export default function AgenciesPage() {
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-emerald-500/20">
                 <Image
                   src="/corvex-dashboard.jpg"
-                  alt="Professional agency operations with Corvex"
+                  alt="Professional agency operations with Tareq"
                   fill
                   className="object-cover"
                   unoptimized
@@ -269,7 +269,7 @@ export default function AgenciesPage() {
                   </h3>
                   <p className="text-lg text-zinc-300 max-w-2xl mx-auto leading-relaxed">
                     Every minute you wait, you lose <span className="text-red-400 font-bold">$5.33</span> to unprofessional systems. 
-                    Your competitors using Corvex are closing deals you're losing.
+                    Your competitors using Tareq are closing deals you're losing.
                   </p>
                 </div>
                 

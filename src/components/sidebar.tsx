@@ -31,7 +31,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <span className="text-sm font-bold">C</span>
           </div>
           <div className="grid flex-1 text-left text-sm leading-tight">
-            <span className="truncate font-semibold">Corvex</span>
+            <span className="truncate font-semibold">Tareq</span>
             <span className="truncate text-xs">Client Portal</span>
           </div>
         </div>
@@ -54,7 +54,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarContent>
       <SidebarFooter>
         <div className="p-4 text-xs text-muted-foreground">
-          © 2024 Corvex
+          © 2024 Tareq
         </div>
       </SidebarFooter>
       <SidebarRail />

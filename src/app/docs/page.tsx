@@ -7,7 +7,7 @@ export default function DocsPage() {
   const docCategories = [
     {
       title: "Getting Started",
-      description: "Quick setup and first steps with Corvex",
+      description: "Quick setup and first steps with Tareq",
       icon: Book,
       articles: [
         "Quick Start Guide",
@@ -29,7 +29,7 @@ export default function DocsPage() {
     },
     {
       title: "API & Integrations",
-      description: "Connect Corvex with your existing tools",
+      description: "Connect Tareq with your existing tools",
       icon: Code,
       articles: [
         "API Overview",
@@ -62,7 +62,7 @@ export default function DocsPage() {
     },
     {
       title: "Advanced Settings",
-      description: "Customize Corvex for your specific needs",
+      description: "Customize Tareq for your specific needs",
       icon: Settings,
       articles: [
         "Custom Fields",
@@ -99,7 +99,7 @@ export default function DocsPage() {
               Complete guide to
               <br />
               <span className="relative">
-                using Corvex.
+                using Tareq.
                 <div className="absolute bottom-2 left-0 w-full h-1 bg-primary/20 rounded-full"></div>
               </span>
             </h1>
@@ -107,7 +107,7 @@ export default function DocsPage() {
 
           {/* Subtitle */}
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-            Everything you need to know about setting up, configuring, and getting the most out of Corvex.
+            Everything you need to know about setting up, configuring, and getting the most out of Tareq.
           </p>
           
           {/* Search Bar */}
@@ -131,7 +131,7 @@ export default function DocsPage() {
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <h2 className="text-2xl font-bold text-foreground mb-2">Quick Start Guide</h2>
-                <p className="text-muted-foreground">Get up and running with Corvex in 5 minutes</p>
+                <p className="text-muted-foreground">Get up and running with Tareq in 5 minutes</p>
               </div>
               <div className="grid md:grid-cols-3 gap-6 mb-6">
                 <div className="text-center">
@@ -172,7 +172,7 @@ export default function DocsPage() {
               Browse documentation
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Find the information you need to get the most out of Corvex.
+              Find the information you need to get the most out of Tareq.
             </p>
           </div>
           

@@ -66,7 +66,7 @@ export default function ClientPortalPage() {
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">White Labelled</h3>
                 <p className="text-sm text-muted-foreground">
-                  Add your own domain name and branding. Your clients will never know they're using Corvex.
+                  Add your own domain name and branding. Your clients will never know they're using Tareq.
                 </p>
               </CardContent>
             </Card>

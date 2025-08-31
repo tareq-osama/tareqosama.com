@@ -51,7 +51,7 @@ export default function PainPoints() {
                 <div className="w-8 h-8 bg-zinc-800 rounded-full flex items-center justify-center">
                   <X className="w-4 h-4 text-zinc-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-zinc-300">Without Corvex</h3>
+                <h3 className="text-lg font-semibold text-zinc-300">Without Tareq</h3>
               </div>
             </div>
             <div className="p-6">
@@ -59,7 +59,7 @@ export default function PainPoints() {
                 <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                   <Check className="w-4 h-4 text-black" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">With Corvex</h3>
+                <h3 className="text-lg font-semibold text-white">With Tareq</h3>
               </div>
             </div>
           </div>

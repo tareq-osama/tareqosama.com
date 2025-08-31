@@ -42,7 +42,7 @@ const solutions = [
   {
     title: "Case Studies",
     href: "/case-studies",
-    description: "See how agencies transformed with Corvex"
+    description: "See how agencies transformed with Tareq"
   }
 ];
 
@@ -68,7 +68,7 @@ const resources = [
   {
     title: "Documentation",
     href: "/docs",
-    description: "Complete guide to using Corvex platform",
+    description: "Complete guide to using Tareq platform",
     icon: <Lightbulb className="w-5 h-5" />
   }
 ];
@@ -127,8 +127,8 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="relative w-32 h-8" onClick={handleLogoClick}>
               <Image
-                src="/corvexlogo.svg"
-                alt="Corvex - Professional Agency Platform"
+                src="/tareq-logo.svg"
+                alt="Tareq - Professional Agency Platform"
                 fill
                 className="object-contain"
                 priority
@@ -156,7 +156,7 @@ export default function Navbar() {
                             >
                               <Zap className="h-6 w-6 text-white" />
                               <div className="mb-2 mt-4 text-lg font-medium text-white">
-                                Corvex Platform
+                                Tareq Platform
                               </div>
                               <p className="text-sm leading-tight text-zinc-400">
                                 The complete agency management platform that transforms chaos into revenue.
@@ -269,8 +269,8 @@ export default function Navbar() {
                     <SheetTitle className="text-left">
                       <div className="relative w-24 h-6">
                         <Image
-                          src="/corvexlogo.svg"
-                          alt="Corvex"
+                          src="/tareq-logo.svg"
+                          alt="Tareq"
                           fill
                           className="object-contain"
                         />

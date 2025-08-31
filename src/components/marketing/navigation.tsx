@@ -31,7 +31,7 @@ const solutions = [
   {
     title: "Case Studies",
     href: "/case-studies",
-    description: "See how businesses transformed with Corvex"
+    description: "See how businesses transformed with Tareq"
   }
 ];
 
@@ -49,7 +49,7 @@ const resources = [
   {
     title: "Documentation",
     href: "/docs",
-    description: "Complete guide to using Corvex platform"
+    description: "Complete guide to using Tareq platform"
   }
 ];
 
@@ -121,7 +121,7 @@ export default function Navigation() {
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/tareq-logo.svg" alt="Corvex Logo" width={80} height={100} />
+              <Image src="/tareq-logo.svg" alt="Tareq Logo" width={80} height={100} />
             </Link>
 
 

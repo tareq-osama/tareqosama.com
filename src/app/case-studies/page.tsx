@@ -18,7 +18,7 @@ const caseStudies = [
       { metric: "87%", label: "Fewer Status Emails" },
       { metric: "4.9★", label: "Client Satisfaction" }
     ],
-    quote: "Corvex didn't just organize our chaos—it transformed us into the professional agency we always wanted to be. Our clients actually thank us for the experience now.",
+            quote: "Tareq didn't just organize our chaos—it transformed us into the professional agency we always wanted to be. Our clients actually thank us for the experience now.",
     image: "/corvex-dashboard.jpg",
     featured: true
   },
@@ -30,7 +30,7 @@ const caseStudies = [
       { metric: "+240%", label: "Team Productivity" },
       { metric: "$1.2M", label: "Annual Revenue" }
     ],
-    quote: "The day I switched to Corvex was the day I stopped losing sleep over client management.",
+            quote: "The day I switched to Tareq was the day I stopped losing sleep over client management.",
     image: "/corvex-dashboard.jpg"
   },
   {
@@ -73,7 +73,7 @@ export default function CaseStudiesPage() {
           {/* Subtitle */}
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
             See how businesses like yours transformed their operations, delighted clients, and 
-            <span className="font-semibold text-foreground"> multiplied their revenue</span> with Corvex.
+            <span className="font-semibold text-foreground"> multiplied their revenue</span> with Tareq.
           </p>
         </div>
       </section>
@@ -143,7 +143,7 @@ export default function CaseStudiesPage() {
               More success stories
             </h2>
             <p className="text-lg text-muted-foreground">
-              See how other businesses transformed with Corvex.
+              See how other businesses transformed with Tareq.
             </p>
           </div>
           
@@ -193,7 +193,7 @@ export default function CaseStudiesPage() {
               The numbers speak for themselves
             </h2>
             <p className="text-lg text-muted-foreground">
-              Real results from real businesses using Corvex.
+              Real results from real businesses using Tareq.
             </p>
           </div>
           

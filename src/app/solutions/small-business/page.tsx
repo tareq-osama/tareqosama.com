@@ -139,7 +139,7 @@ export default function SmallBusinessPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-6">
-              Why small businesses choose Corvex?
+              Why small businesses choose Tareq?
             </h2>
             <p className="text-lg text-muted-foreground">
               Built by entrepreneurs, for entrepreneurs.
@@ -231,7 +231,7 @@ export default function SmallBusinessPage() {
             Ready to grow your business?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Join thousands of small businesses using Corvex to look professional and scale efficiently.
+            Join thousands of small businesses using Tareq to look professional and scale efficiently.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
