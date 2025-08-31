@@ -13,27 +13,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-
-const features = [
-  {
-    title: "White-label client portal",
-    href: "/features/client-portal",
-    description: "Professional client portal for businesses"
-  },
-  {
-    title: "Task management",
-    href: "/features/tasks",
-    description: "Task management for businesses"
-  },
-  {
-    title: "Integrations & webhooks",
-    href: "/features/integrations",
-    description: "Integrations & webhooks"
-  }
-];
 
 const solutions = [
   {
@@ -183,25 +165,9 @@ export default function Navigation() {
             <div className="h-full overflow-y-auto">
               <div className="max-w-7xl mx-auto px-6 py-6 space-y-6 pb-8">
                 
-                {/* Mobile Features */}
+                {/* Mobile Platform 
                 <div>
-                  <h3 className="font-semibold text-foreground mb-3">Features</h3>
-                  <div className="space-y-2 pl-4">
-                    {features.map((feature) => (
-                      <Link
-                        key={feature.href}
-                        href={feature.href}
-                        className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
-                        onClick={() => setIsMobileMenuOpen(false)}>
-                        {feature.title}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Mobile Solutions */}
-                <div>
-                  <h3 className="font-semibold text-foreground mb-3">Solutions</h3>
+                  <h3 className="font-semibold text-foreground mb-3">Platform</h3>
                   <div className="space-y-2 pl-4">
                     {solutions.map((solution) => (
                       <Link
@@ -209,13 +175,14 @@ export default function Navigation() {
                         href={solution.href}
                         className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}>
-                        {solution.title}
+                        <div className="font-medium">{solution.title}</div>
+                        <div className="text-sm text-muted-foreground">{solution.description}</div>
                       </Link>
                     ))}
                   </div>
-                </div>
+                </div>*/}
 
-                {/* Mobile Resources */}
+                {/* Mobile Resources 
                 <div>
                   <h3 className="font-semibold text-foreground mb-3">Resources</h3>
                   <div className="space-y-2 pl-4">
@@ -225,13 +192,14 @@ export default function Navigation() {
                         href={resource.href}
                         className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}>
-                        {resource.title}
+                        <div className="font-medium">{resource.title}</div>
+                        <div className="text-sm text-muted-foreground">{resource.description}</div>
                       </Link>
                     ))}
                   </div>
-                </div>
+                </div>*/}
 
-                {/* Mobile Direct Links */}
+                {/* Mobile Pricing 
                 <div className="space-y-2">
                   <Link
                     href="/pricing"
@@ -240,26 +208,18 @@ export default function Navigation() {
                   >
                     Pricing
                   </Link>
-                  <Link
-                    href="/blog"
-                    className="block py-2 font-semibold text-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Blog
-                  </Link>
                 </div>
-
+                  */}
                 {/* Mobile CTA */}
                 <div className="flex flex-col space-y-3 pt-4 border-t border-border/20">
                   <Button variant="ghost" size="sm" asChild>
-                    <Link href="https://app.usecorvex.com" onClick={() => setIsMobileMenuOpen(false)}>
-                      Login
+                    <Link href="https://tareqosama.com/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                    Join Newsletter
                     </Link>
                   </Button>
                   <Button size="sm" asChild>
-                    <Link href="https://app.usecorvex.com/signup" onClick={() => setIsMobileMenuOpen(false)}>
-                      Get started
-                    </Link>
+                    <Link href="https://tareqosama.com/consultation" onClick={() => setIsMobileMenuOpen(false)}>
+                    Get a Consultation                    </Link>
                   </Button>
                 </div>
               </div>
