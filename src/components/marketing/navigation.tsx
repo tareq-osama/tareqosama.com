@@ -16,6 +16,7 @@ import {
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import { ModeToggle } from "@/components/marketing/mode-toggle";
 
 const solutions = [
   {
@@ -106,7 +107,7 @@ export default function Navigation() {
       <AnimatePresence>
         {isVisible && (
           <motion.div 
-            className=" top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/20"
+            className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/20"
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             exit={{ y: -100 }}
@@ -127,7 +128,7 @@ export default function Navigation() {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center space-x-4">
-              
+              <ModeToggle />
               <Button size="sm" asChild>
                 <Link href="https://tareqosama.com/contact">Let's work together</Link>
               </Button>
@@ -212,6 +213,10 @@ export default function Navigation() {
                   */}
                 {/* Mobile CTA */}
                 <div className="flex flex-col space-y-3 pt-4 border-t border-border/20">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-foreground">Theme</span>
+                    <ModeToggle />
+                  </div>
                   <Button variant="ghost" size="sm" asChild>
                     <Link href="https://tareqosama.com/contact" onClick={() => setIsMobileMenuOpen(false)}>
                     Join Newsletter

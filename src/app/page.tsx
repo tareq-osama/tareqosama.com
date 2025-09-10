@@ -12,11 +12,7 @@ export default function HomePage() {
       <section className="relative w-full overflow-hidden">
         <div className=" pt-6 bg-gradient-to-b from-background via-background/95 to-background/90" />
         <div className="relative items-center justify-center flex-col mx-auto px-6 h-svh flex text-center">
-          {/* Small label above headline */}
-          <p className="text-sm  text-muted-foreground mb-8 font-medium tracking-wide">
-          Hi, This is Tareq
-          </p>
-          
+   
           {/* Main headline */}
           <div className="flex flex-col items-center justify-center">
           <h1 className="   text-start text-6xl md:text-6xl font-bold text-foreground mb-8 tracking-tight">
