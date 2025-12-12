@@ -5,10 +5,10 @@ export const metadata: Metadata = {
     default: "Blog | Tareq",
     template: "%s | Tareq Blog"
   },
-  description: "Latest insights on business management, client communication, and growth strategies for one-person businesses.",
+  description: "Latest insights on web design, development, branding, marketing strategies, and innovative solutions from Tareq Osama.",
   openGraph: {
-    title: "Tareq Blog - Business Management Insights",
-    description: "Latest insights on business management, client communication, and growth strategies.",
+    title: "Tareq Osama Blog - Design & Development Insights",
+    description: "Latest insights on web design, development, branding, marketing strategies, and innovative solutions.",
     type: "website",
     url: "https://tareqosama.com/blog",
   },

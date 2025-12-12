@@ -19,27 +19,27 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://tareqosama.com'),
   title: {
-    default: "Tareq - Client Portal for One-Person Businesses",
-    template: "%s | Tareq"
+    default: "Tareq Osama - Digital Designer & Web Developer",
+    template: "%s | Tareq Osama"
   },
-  description: "Tareq is the complete client management platform for one-person businesses. Streamline client communication, automate invoicing, track projects, and grow your revenue.",
+  description: "Tareq is a Digital Designer and Web Developer, focused on merging web technologies, AI, marketing and branding strategies to build innovative solutions that drive business growth and elevate brands presence.",
   keywords: [
-    "client portal",
-    "business management software",
-    "freelancer tools",
-    "project tracking",
-    "client communication",
-    "invoice management",
-    "one-person business",
-    "small business software",
-    "client management system",
-    "professional services platform",
-    "business automation",
-    "client dashboard"
+    "digital designer",
+    "web developer",
+    "web design",
+    "UI/UX design",
+    "branding",
+    "marketing strategy",
+    "web technologies",
+    "AI integration",
+    "frontend development",
+    "responsive design",
+    "creative design",
+    "brand identity"
   ],
-  authors: [{ name: "Tareq Team", url: "https://tareqosama.com" }],
-  creator: "Tareq",
-  publisher: "Tareq Inc.",
+  authors: [{ name: "Tareq Osama", url: "https://tareqosama.com" }],
+  creator: "Tareq Osama",
+  publisher: "Tareq Osama",
   formatDetection: {
     email: false,
     address: false,
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://tareqosama.com",
-    title: "Tareq",
-    description: "",
-    siteName: "Tareq",
+    title: "Tareq Osama - Digital Designer & Web Developer",
+    description: "Digital Designer and Web Developer focused on merging web technologies, AI, marketing and branding strategies to build innovative solutions that drive business growth and elevate brands presence.",
+    siteName: "Tareq Osama",
     images: [
       {
         url: "https://tareqosama.com/og-image.jpg",
@@ -63,8 +63,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tareq - Client Portal",
-    description: "Transform your one-person business with our complete client management platform.",
+    title: "Tareq Osama - Digital Designer & Web Developer",
+    description: "Digital Designer and Web Developer focused on merging web technologies, AI, marketing and branding strategies to build innovative solutions.",
     creator: "@tareq",
     images: ["https://tareqosama.com/twitter-image.jpg"],
   },
@@ -95,8 +95,8 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
-  category: "Business Software",
-  classification: "Business Management Platform",
+  category: "Personal Portfolio",
+  classification: "Digital Design & Web Development",
   referrer: "origin-when-cross-origin",
   colorScheme: "dark light",
   themeColor: [
@@ -126,29 +126,26 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "Tareq",
-  applicationCategory: "BusinessApplication",
-  operatingSystem: "Web",
-  description: "Client portal and business management platform for one-person businesses",
+  "@type": "Person",
+  name: "Tareq Osama",
+  jobTitle: "Digital Designer & Web Developer",
+  description: "Digital Designer and Web Developer focused on merging web technologies, AI, marketing and branding strategies to build innovative solutions that drive business growth and elevate brands presence.",
   url: "https://tareqosama.com",
-  screenshot: "https://tareqosama.com/screenshot.jpg",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    ratingCount: "2847"
-  },
-  offers: {
-    "@type": "Offer",
-    price: "29",
-    priceCurrency: "USD",
-    priceValidUntil: "2025-12-31",
-    availability: "https://schema.org/InStock"
-  },
-  creator: {
+  sameAs: [
+    "https://tareqosama.com"
+  ],
+  knowsAbout: [
+    "Web Design",
+    "Web Development",
+    "UI/UX Design",
+    "Branding",
+    "Marketing Strategy",
+    "AI Integration",
+    "Frontend Development"
+  ],
+  alumniOf: {
     "@type": "Organization",
-    name: "Tareq Inc.",
-    url: "https://tareqosama.com"
+    name: "Web Development & Design"
   }
 }
 

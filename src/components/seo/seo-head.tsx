@@ -11,8 +11,8 @@ interface SEOProps {
 }
 
 export default function SEOHead({
-  title = "Tareq - Client Portal",
-  description = "Transform your one-person business with Tareq's complete client management platform.",
+  title = "Tareq Osama - Digital Designer & Web Developer",
+  description = "Digital Designer and Web Developer focused on merging web technologies, AI, marketing and branding strategies to build innovative solutions that drive business growth and elevate brands presence.",
   canonical,
   ogImage = "https://tareqosama.com/og-image.jpg",
   ogType = "website",
