@@ -19,10 +19,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://tareqosama.com'),
   title: {
-    default: "Tareq - All-in-One Client Portal for One-Person Businesses",
+    default: "Tareq - Client Portal for One-Person Businesses",
     template: "%s | Tareq"
   },
-  description: "Tareq is the complete client management platform for one-person businesses. Streamline client communication, automate invoicing, track projects, and grow your revenue with our all-in-one solution.",
+  description: "Tareq is the complete client management platform for one-person businesses. Streamline client communication, automate invoicing, track projects, and grow your revenue.",
   keywords: [
     "client portal",
     "business management software",
@@ -49,21 +49,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://tareqosama.com",
-    title: "Tareq - All-in-One Client Portal for One-Person Businesses",
-    description: "Transform your one-person business with Tareq's complete client management platform. Streamline communication, automate billing, and grow your revenue.",
+    title: "Tareq",
+    description: "",
     siteName: "Tareq",
     images: [
       {
         url: "https://tareqosama.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Tareq - Client Portal Platform",
+        alt: "Tareq  ",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tareq - All-in-One Client Portal",
+    title: "Tareq - Client Portal",
     description: "Transform your one-person business with our complete client management platform.",
     creator: "@tareq",
     images: ["https://tareqosama.com/twitter-image.jpg"],
@@ -130,7 +130,7 @@ const jsonLd = {
   name: "Tareq",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
-  description: "All-in-one client portal and business management platform for one-person businesses",
+  description: "Client portal and business management platform for one-person businesses",
   url: "https://tareqosama.com",
   screenshot: "https://tareqosama.com/screenshot.jpg",
   aggregateRating: {

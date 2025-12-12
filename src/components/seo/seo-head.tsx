@@ -11,7 +11,7 @@ interface SEOProps {
 }
 
 export default function SEOHead({
-  title = "Tareq - All-in-One Client Portal",
+  title = "Tareq - Client Portal",
   description = "Transform your one-person business with Tareq's complete client management platform.",
   canonical,
   ogImage = "https://tareqosama.com/og-image.jpg",
