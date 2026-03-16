@@ -170,7 +170,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
-      <body className={`${ibmPlexSansArabic.className} antialiased`}>
+      <body className={`${ibmPlexSansArabic.className} antialiased`} suppressHydrationWarning>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-KKQSBJLP"
