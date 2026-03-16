@@ -7,65 +7,65 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const successMetrics = [
-  { 
-    number: "289%", 
-    label: "Average Revenue Growth",
-    subtext: "In first 6 months"
+  {
+    number: "289%",
+    label: "متوسط نمو الإيرادات",
+    subtext: "في أول 6 أشهر"
   },
-  { 
-    number: "4.9★", 
-    label: "Customer Satisfaction", 
-    subtext: "From 2,847+ reviews"
+  {
+    number: "4.9★",
+    label: "رضا العملاء",
+    subtext: "من أكثر من 2,847 مراجعة"
   },
-  { 
-    number: "$4.2M", 
-    label: "Revenue Processed",
-    subtext: "Last 30 days alone"
+  {
+    number: "$4.2M",
+    label: "إيرادات معالجة",
+    subtext: "في آخر 30 يوم فقط"
   },
-  { 
-    number: "23 Days", 
-    label: "Faster Payments",
-    subtext: "Average collection time"
+  {
+    number: "23 يوماً",
+    label: "مدفوعات أسرع",
+    subtext: "متوسط وقت التحصيل"
   }
 ];
 
 const testimonials = [
   {
-    name: "Marcus Rodriguez",
-    role: "Founder & CEO",
+    name: "ماركوس رودريغيز",
+    role: "المؤسس والرئيس التنفيذي",
     company: "Velocity Digital",
     revenue: "$2.1M ARR",
     image: "/api/placeholder/60/60",
-            quote: "I was bleeding money on manual processes and unprofessional client experiences. Tareq saved my agency. We went from struggling to scale past $500K to hitting $2.1M in 18 months. My clients actually BEG me to work with them now.",
-    results: "+320% revenue growth",
+    quote: "كنت أنزف أموالاً على العمليات اليدوية وتجارب العملاء غير الاحترافية. أنقذ طارق وكالتي. انتقلنا من الكفاح للتوسع إلى تجاوز 2.1 مليون دولار في 18 شهراً. عملاؤه يتوسلون للعمل معه الآن.",
+    results: "+320% نمو في الإيرادات",
     featured: true
   },
   {
-    name: "Sarah Chen",
-    role: "Agency Owner",
+    name: "سارة شن",
+    role: "مالكة الوكالة",
     company: "Digital Spark",
     revenue: "$1.2M ARR",
     image: "/api/placeholder/60/60",
-            quote: "The day I switched to Tareq was the day I stopped losing sleep over client management. My team productivity doubled, client complaints disappeared, and I finally started charging what I'm worth.",
-    results: "Doubled team productivity"
+    quote: "اليوم الذي انتقلت فيه إلى طارق كان اليوم الذي توقفت فيه عن فقدان النوم بسبب إدارة العملاء. تضاعفت إنتاجية فريقي، واختفت شكاوى العملاء، وبدأت أخيراً في تحصيل ما أستحقه.",
+    results: "مضاعفة إنتاجية الفريق"
   },
   {
-    name: "David Kim",
-    role: "Creative Director",
+    name: "ديفيد كيم",
+    role: "المدير الإبداعي",
     company: "Apex Creative",
     revenue: "$850K ARR",
     image: "/api/placeholder/60/60",
-            quote: "Tareq didn't just organize my chaos—it transformed my entire business model. I went from firefighting daily crises to strategic growth planning. Best investment I've ever made.",
-    results: "Zero daily crises"
+    quote: "لم يُنظّم طارق فوضاي فحسب - بل حوّل نموذج أعمالي بأكمله. انتقلت من إخماد الأزمات اليومية إلى التخطيط الاستراتيجي للنمو. أفضل استثمار قمت به على الإطلاق.",
+    results: "صفر أزمات يومية"
   },
   {
-    name: "Jessica Thompson",
-    role: "Founder",
+    name: "جيسيكا تومبسون",
+    role: "المؤسسة",
     company: "Growth Labs",
     revenue: "$1.8M ARR",
     image: "/api/placeholder/60/60",
-            quote: "My agency was drowning in spreadsheets and missed deadlines. 6 months with Tareq later: $1.8M revenue, 95% on-time delivery, and clients who refer us constantly. This platform literally saved my business from failure.",
-    results: "95% on-time delivery",
+    quote: "كانت وكالتي تغرق في جداول البيانات والمواعيد الفائتة. بعد 6 أشهر مع طارق: 1.8 مليون دولار إيرادات، 95% تسليم في الوقت المحدد، وعملاء يحيلوننا باستمرار. هذه المنصة أنقذت أعمالي من الفشل حرفياً.",
+    results: "95% تسليم في الوقت المحدد",
     success: true
   }
 ];
@@ -85,8 +85,8 @@ export default function SocialProof() {
   return (
     <section className="py-32 bg-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        
-        {/* Section Header */}
+
+        {/* رأس القسم */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -96,21 +96,21 @@ export default function SocialProof() {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/50 border border-zinc-700">
             <Award className="w-4 h-4 text-zinc-400" />
-            <span className="text-sm font-medium text-zinc-300 tracking-wide">Proven success stories</span>
+            <span className="text-sm font-medium text-zinc-300 tracking-wide">قصص نجاح مثبتة</span>
           </div>
-          
+
           <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
-            Real agencies, real results,
-            <span className="block mt-2 text-zinc-300">real revenue growth</span>
+            وكالات حقيقية، نتائج حقيقية،
+            <span className="block mt-2 text-zinc-300">نمو حقيقي في الإيرادات</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
-            Don't take our word for it. Here's what happens when agencies stop accepting chaos 
-            and start <span className="text-white font-semibold">demanding excellence from their systems</span>.
+            لا تأخذ كلامنا على محمل الجد. إليك ما يحدث عندما تتوقف الوكالات عن قبول الفوضى
+            وتبدأ في <span className="text-white font-semibold">المطالبة بالتميز من أنظمتها</span>.
           </p>
         </motion.div>
 
-        {/* Success Metrics Dashboard */}
+        {/* لوحة مقاييس النجاح */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -139,10 +139,10 @@ export default function SocialProof() {
           ))}
         </motion.div>
 
-        {/* Testimonials Bento Grid */}
+        {/* شبكة الشهادات */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-20">
-          
-          {/* Large Featured Testimonial */}
+
+          {/* شهادة مميزة كبيرة */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -156,13 +156,13 @@ export default function SocialProof() {
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                   ))}
-                  <span className="text-emerald-400 font-semibold ml-2">Featured success</span>
+                  <span className="text-emerald-400 font-semibold mr-2">قصة نجاح مميزة</span>
                 </div>
-                
+
                 <blockquote className="text-xl lg:text-2xl text-white font-medium leading-relaxed">
                   "{testimonials[0].quote}"
                 </blockquote>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <Avatar className="w-12 h-12">
@@ -173,25 +173,24 @@ export default function SocialProof() {
                     </Avatar>
                     <div>
                       <div className="font-semibold text-white">{testimonials[0].name}</div>
-                      <div className="text-sm text-zinc-400">{testimonials[0].role}, {testimonials[0].company}</div>
+                      <div className="text-sm text-zinc-400">{testimonials[0].role}، {testimonials[0].company}</div>
                       <div className="text-sm font-medium text-emerald-400">{testimonials[0].revenue}</div>
                     </div>
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold text-emerald-400">{testimonials[0].results}</div>
-                    <div className="text-sm text-zinc-400">Results achieved</div>
+                    <div className="text-sm text-zinc-400">النتائج المحققة</div>
                   </div>
                 </div>
-                
-                {/* Background decoration */}
-                <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
+
+                <div className="absolute top-0 left-0 w-32 h-32 opacity-10">
                   <TrendingUp className="w-full h-full text-emerald-400" />
                 </div>
               </CardContent>
             </Card>
           </motion.div>
 
-          {/* Medium Testimonials */}
+          {/* شهادات متوسطة */}
           <div className="lg:col-span-4 space-y-8">
             {testimonials.slice(1, 3).map((testimonial, index) => (
               <motion.div
@@ -208,11 +207,11 @@ export default function SocialProof() {
                         <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    
+
                     <blockquote className="text-zinc-300 leading-relaxed text-sm">
                       "{testimonial.quote}"
                     </blockquote>
-                    
+
                     <div className="flex items-center gap-3 pt-2 border-t border-zinc-800">
                       <Avatar className="w-8 h-8">
                         <AvatarImage src={testimonial.image} alt={testimonial.name} />
@@ -233,7 +232,7 @@ export default function SocialProof() {
           </div>
         </div>
 
-        {/* Bottom Success Story */}
+        {/* قصة نجاح سفلية */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -248,14 +247,14 @@ export default function SocialProof() {
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-emerald-400" />
                     <span className="text-emerald-400 font-semibold text-sm tracking-wider">
-                      From near bankruptcy to 7-figures
+                      من شفا الإفلاس إلى سبعة أرقام
                     </span>
                   </div>
-                  
+
                   <blockquote className="text-lg lg:text-xl text-white leading-relaxed">
                     "{testimonials[3].quote}"
                   </blockquote>
-                  
+
                   <div className="flex items-center gap-4">
                     <Avatar className="w-10 h-10">
                       <AvatarImage src={testimonials[3].image} alt={testimonials[3].name} />
@@ -265,27 +264,26 @@ export default function SocialProof() {
                     </Avatar>
                     <div>
                       <div className="font-semibold text-white">{testimonials[3].name}</div>
-                      <div className="text-sm text-zinc-400">{testimonials[3].role}, {testimonials[3].company}</div>
+                      <div className="text-sm text-zinc-400">{testimonials[3].role}، {testimonials[3].company}</div>
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="text-center lg:text-right space-y-4">
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
                     <TrendingUp className="w-4 h-4 text-emerald-400" />
-                    <span className="text-emerald-400 font-semibold text-sm">Success metrics</span>
+                    <span className="text-emerald-400 font-semibold text-sm">مقاييس النجاح</span>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <div className="text-4xl font-bold text-emerald-400">{testimonials[3].revenue}</div>
-                    <div className="text-sm text-zinc-400">Annual Recurring Revenue</div>
+                    <div className="text-sm text-zinc-400">الإيرادات السنوية المتكررة</div>
                     <div className="text-lg font-semibold text-white">{testimonials[3].results}</div>
                   </div>
-                  
-                  {/* Visual proof overlay */}
+
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-400/20 text-xs">
                     <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-                    <span className="text-yellow-400 font-medium">Verified results</span>
+                    <span className="text-yellow-400 font-medium">نتائج موثقة</span>
                   </div>
                 </div>
               </div>
@@ -293,7 +291,7 @@ export default function SocialProof() {
           </Card>
         </motion.div>
 
-        {/* Company Showcase */}
+        {/* عرض الشركات */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -303,14 +301,14 @@ export default function SocialProof() {
         >
           <div className="space-y-4">
             <h3 className="text-2xl lg:text-3xl font-bold text-white">
-              Trusted by 800+ successful agencies worldwide
+              تثق بها أكثر من 800 وكالة ناجحة حول العالم
             </h3>
             <p className="text-zinc-400 max-w-2xl mx-auto">
-              Join the elite group of agencies that have transformed their operations 
-              and <span className="text-white font-semibold">multiplied their revenue</span> with Tareq.
+              انضم إلى المجموعة المتميزة من الوكالات التي حوّلت عملياتها
+              و<span className="text-white font-semibold">ضاعفت إيراداتها</span> مع طارق.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-4 lg:grid-cols-8 gap-6 opacity-60 hover:opacity-100 transition-opacity">
             {companyLogos.map((company, index) => (
               <motion.div
@@ -327,19 +325,19 @@ export default function SocialProof() {
               </motion.div>
             ))}
           </div>
-          
+
           <div className="flex items-center justify-center gap-8 text-sm text-zinc-500 pt-8 border-t border-zinc-800">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-emerald-400 rounded-full" />
-              <span>289% average revenue growth</span>
+              <span>289% متوسط نمو الإيرادات</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-blue-400 rounded-full" />
-              <span>4.9★ customer satisfaction</span>
+              <span>4.9★ رضا العملاء</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-purple-400 rounded-full" />
-              <span>23 days faster payments</span>
+              <span>23 يوماً مدفوعات أسرع</span>
             </div>
           </div>
         </motion.div>
@@ -347,4 +345,3 @@ export default function SocialProof() {
     </section>
   );
 }
-

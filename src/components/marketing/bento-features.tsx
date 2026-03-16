@@ -9,43 +9,43 @@ import Image from 'next/image';
 
 const mainFeatures = [
   {
-    title: "Client Experience Revolution",
-    subtitle: "From scattered chaos to premium professional service",
-    description: "Transform client relationships overnight with branded portals that make YOU look like the premium agency you are. Watch clients go from frustrated questioners to raving advocates.",
+    title: "ثورة تجربة العملاء",
+    subtitle: "من الفوضى المتفرقة إلى الخدمة الاحترافية المتميزة",
+    description: "حوّل علاقات عملائك بين عشية وضحاها مع بوابات ذات علامة تجارية تجعلك تبدو كالوكالة المتميزة التي أنت عليها. شاهد العملاء ينتقلون من المستفسرين المحبطين إلى المدافعين المتحمسين.",
     image: "/corvex-dashboard.jpg",
     results: [
-      "87% reduction in status update emails",
-      "98.7% client satisfaction rate",
-      "3x higher client retention",
-      "40% premium pricing justified"
+      "87% انخفاض في رسائل تحديث الحالة",
+      "98.7% معدل رضا العملاء",
+      "3 أضعاف معدل الاحتفاظ بالعملاء",
+      "40% تسعير أعلى مبرر"
     ],
     icon: <Users className="w-6 h-6" />,
     layout: "default"
   },
   {
-    title: "AI-Powered Proposals That Win",
-    subtitle: "Stop losing deals to faster competitors",
-    description: "Generate professional, winning proposals in minutes instead of days. Our AI learns from million-dollar agencies to create proposals that close deals and command premium rates.",
+    title: "عروض مدعومة بالذكاء الاصطناعي تفوز",
+    subtitle: "أوقف خسارة الصفقات لمنافسين أسرع",
+    description: "أنشئ عروضاً احترافية وفائزة في دقائق بدلاً من أيام. يتعلم ذكاؤنا الاصطناعي من الوكالات متعددة الملايين لإنشاء عروض تُغلق الصفقات وتُحقق أسعاراً مميزة.",
     image: "/corvex-dashboard.jpg",
     results: [
-      "73% higher proposal win rate",
-      "5x faster proposal generation",
-      "Average 34% higher project values",
-      "Zero late proposal deliveries"
+      "73% معدل فوز أعلى بالعروض",
+      "5 أضعاف سرعة إنشاء العروض",
+      "34% متوسط قيمة مشاريع أعلى",
+      "صفر تأخير في تسليم العروض"
     ],
     icon: <Zap className="w-6 h-6" />,
     layout: "large"
   },
   {
-    title: "Smart Invoicing & Payments",
-    subtitle: "End cash flow nightmares forever",
-    description: "Automated invoicing with intelligent payment reminders that actually work. Get paid 23 days faster while spending zero time chasing payments.",
+    title: "الفوترة والمدفوعات الذكية",
+    subtitle: "أنهِ كوابيس التدفق النقدي إلى الأبد",
+    description: "فوترة آلية مع تذكيرات دفع ذكية تعمل فعلاً. احصل على المدفوعات بـ23 يوماً أسرع مع صرف صفر وقت في ملاحقة المدفوعات.",
     image: "/corvex-dashboard.jpg",
     results: [
-      "23 days faster payment collection",
-      "94% reduction in late payments",
-      "Zero manual invoice creation",
-      "$47K average annual cash flow improvement"
+      "23 يوماً أسرع في تحصيل المدفوعات",
+      "94% انخفاض في المدفوعات المتأخرة",
+      "صفر إنشاء فواتير يدوي",
+      "47 ألف دولار متوسط تحسين التدفق النقدي السنوي"
     ],
     icon: <DollarSign className="w-6 h-6" />,
     layout: "wide"
@@ -54,45 +54,45 @@ const mainFeatures = [
 
 const bentoFeatures = [
   {
-    title: "Project Management Made Simple",
-    description: "Never miss another deadline or scope creep again",
+    title: "إدارة المشاريع بشكل مبسط",
+    description: "لا تفوّت موعداً نهائياً أو زحفاً في النطاق مرة أخرى",
     icon: <CheckCircle className="w-5 h-5" />,
-    benefit: "95% on-time delivery rate",
+    benefit: "95% تسليم في الوقت المحدد",
     layout: "default"
   },
   {
-    title: "Time Tracking That Actually Works", 
-    description: "Automatic time capture and billing integration",
+    title: "تتبع الوقت الذي يعمل فعلاً",
+    description: "التقاط الوقت تلقائياً وتكامل الفوترة",
     icon: <Clock className="w-5 h-5" />,
-    benefit: "31 hours saved weekly",
+    benefit: "31 ساعة موفرة أسبوعياً",
     layout: "default"
   },
   {
-    title: "Team Collaboration Hub",
-    description: "Keep everyone aligned without endless meetings",
+    title: "مركز تعاون الفريق",
+    description: "حافظ على توافق الجميع بدون اجتماعات لا نهاية لها",
     icon: <Users className="w-5 h-5" />,
-    benefit: "67% fewer internal meetings",
+    benefit: "67% اجتماعات داخلية أقل",
     layout: "default"
   },
   {
-    title: "Revenue Analytics Dashboard",
-    description: "See exactly where your money comes from and goes",
+    title: "لوحة تحليلات الإيرادات",
+    description: "شاهد بالضبط من أين تأتي أموالك وأين تذهب",
     icon: <TrendingUp className="w-5 h-5" />,
-    benefit: "289% average revenue growth",
+    benefit: "289% متوسط نمو الإيرادات",
     layout: "large"
   },
   {
-    title: "Document & Asset Management",
-    description: "Never lose important files or struggle with versions again",
+    title: "إدارة المستندات والأصول",
+    description: "لا تفقد ملفات مهمة أو تعاني من الإصدارات مرة أخرى",
     icon: <Star className="w-5 h-5" />,
-    benefit: "Zero lost documents",
+    benefit: "صفر مستندات مفقودة",
     layout: "default"
   },
   {
-    title: "Client Communication Center",
-    description: "All client conversations in one professional place",
+    title: "مركز تواصل العملاء",
+    description: "جميع محادثات العملاء في مكان احترافي واحد",
     icon: <Users className="w-5 h-5" />,
-    benefit: "Professional image boost",
+    benefit: "تعزيز الصورة الاحترافية",
     layout: "default"
   }
 ];
@@ -101,8 +101,8 @@ export default function BentoFeatures() {
   return (
     <section id="features" className="py-32 bg-gradient-to-b from-zinc-900 via-black to-zinc-900">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        
-        {/* Section Header */}
+
+        {/* رأس القسم */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,23 +113,23 @@ export default function BentoFeatures() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
             <Zap className="w-4 h-4 text-emerald-400" />
             <span className="text-sm font-medium text-emerald-300 tracking-wide uppercase">
-              THE TRANSFORMATION FEATURES
+              مميزات التحول
             </span>
           </div>
-          
-                      <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
-            From chaotic mess to
-            <span className="block mt-2 text-emerald-300">revenue-generating machine</span>
+
+          <h2 className="text-h2 font-bold text-white leading-tight tracking-tight">
+            من الفوضى إلى
+            <span className="block mt-2 text-emerald-300">آلة توليد الإيرادات</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
-            Every feature is designed with one goal: 
-            <span className="text-white font-semibold"> make you more money while working less</span>. 
-            Here's how successful agencies are transforming their operations.
+            كل ميزة مصممة بهدف واحد:
+            <span className="text-white font-semibold"> تحقيق المزيد من المال بينما تعمل أقل</span>.
+            إليك كيف تحوّل الوكالات الناجحة عملياتها.
           </p>
         </motion.div>
 
-        {/* Main Features */}
+        {/* المميزات الرئيسية */}
         <div className="space-y-32 mb-32">
           {mainFeatures.map((feature, index) => (
             <motion.div
@@ -142,7 +142,7 @@ export default function BentoFeatures() {
                 index % 2 === 0 ? 'lg:grid-cols-2' : 'lg:grid-cols-2'
               } ${index % 2 === 1 ? 'lg:grid-cols-2' : ''}`}
             >
-              {/* Content */}
+              {/* المحتوى */}
               <div className={`space-y-8 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                 <div className="space-y-6">
                   <div className="flex items-center gap-3">
@@ -150,24 +150,24 @@ export default function BentoFeatures() {
                       {feature.icon}
                     </div>
                     <div className="text-sm font-medium text-emerald-400 uppercase tracking-wider">
-                      GAME CHANGER #{index + 1}
+                      نقطة التحول #{index + 1}
                     </div>
                   </div>
-                  
+
                   <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
                     {feature.title}
                   </h3>
-                  
+
                   <p className="text-lg text-emerald-300 font-semibold">
                     {feature.subtitle}
                   </p>
-                  
+
                   <p className="text-lg lg:text-xl text-zinc-400 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
 
-                {/* Results Grid */}
+                {/* شبكة النتائج */}
                 <div className="grid grid-cols-2 gap-4">
                   {feature.results.map((result, resultIndex) => (
                     <motion.div
@@ -186,16 +186,16 @@ export default function BentoFeatures() {
                   ))}
                 </div>
 
-                <Button 
+                <Button
                   size="lg"
                   className="bg-emerald-500 text-white hover:bg-emerald-400 font-semibold px-8 py-6 text-lg h-auto rounded-xl group shadow-lg"
                 >
-                  Experience This Transformation
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  جرّب هذا التحول
+                  <ArrowRight className="mr-2 w-5 h-5 group-hover:-translate-x-1 transition-transform rotate-180" />
                 </Button>
               </div>
 
-              {/* Image */}
+              {/* الصورة */}
               <div className={`relative ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -206,20 +206,20 @@ export default function BentoFeatures() {
                 >
                   <Image
                     src={feature.image}
-                    alt={`${feature.title} - See the transformation in action`}
+                    alt={`${feature.title} - شاهد التحول في العمل`}
                     fill
                     className="object-cover"
                     unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/20 via-transparent to-transparent" />
-                  
-                  {/* Floating Success Badge */}
+
+                  {/* شارة النجاح العائمة */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
                     viewport={{ once: true }}
-                    className="absolute top-6 right-6 bg-black/90 backdrop-blur-sm border border-emerald-500/30 rounded-lg px-4 py-2 shadow-xl"
+                    className="absolute top-6 left-6 bg-black/90 backdrop-blur-sm border border-emerald-500/30 rounded-lg px-4 py-2 shadow-xl"
                   >
                     <div className="text-center">
                       <div className="text-sm font-bold text-emerald-400">
@@ -230,17 +230,17 @@ export default function BentoFeatures() {
                       </div>
                     </div>
                   </motion.div>
-                  
-                  {/* ROI Indicator */}
+
+                  {/* مؤشر العائد */}
                   <motion.div
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 1 }}
                     viewport={{ once: true }}
-                    className="absolute bottom-6 left-6 bg-white text-black rounded-full px-4 py-2 shadow-xl"
+                    className="absolute bottom-6 right-6 bg-white text-black rounded-full px-4 py-2 shadow-xl"
                   >
                     <div className="text-sm font-bold">
-                      ✅ {index === 0 ? "Client Love" : index === 1 ? "More Wins" : "Faster Pay"}
+                      ✅ {index === 0 ? "رضا العملاء" : index === 1 ? "المزيد من الفوز" : "دفع أسرع"}
                     </div>
                   </motion.div>
                 </motion.div>
@@ -249,7 +249,7 @@ export default function BentoFeatures() {
           ))}
         </div>
 
-        {/* Supporting Features Bento Grid */}
+        {/* شبكة المميزات الداعمة */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -259,14 +259,14 @@ export default function BentoFeatures() {
         >
           <div className="text-center space-y-4">
             <h3 className="text-3xl lg:text-4xl font-bold text-white">
-              Plus everything else you need to dominate
+              بالإضافة إلى كل ما تحتاجه للسيطرة
             </h3>
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-              These supporting features ensure you never fall back into chaos
+              هذه الميزات الداعمة تضمن عدم عودتك إلى الفوضى أبداً
             </p>
           </div>
 
-          {/* Bento Grid */}
+          {/* شبكة بنتو */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {bentoFeatures.map((feature, index) => (
               <motion.div
@@ -289,10 +289,10 @@ export default function BentoFeatures() {
                       </div>
                       <div className="text-right">
                         <div className="text-sm font-semibold text-emerald-400">{feature.benefit}</div>
-                        <div className="text-xs text-zinc-500">Typical result</div>
+                        <div className="text-xs text-zinc-500">نتيجة نموذجية</div>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-3">
                       <h4 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
                         {feature.title}
@@ -308,7 +308,7 @@ export default function BentoFeatures() {
           </div>
         </motion.div>
 
-        {/* Bottom CTA */}
+        {/* دعوة للعمل السفلية */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -320,39 +320,39 @@ export default function BentoFeatures() {
             <CardContent className="p-12 text-center space-y-8">
               <div className="space-y-4">
                 <h3 className="text-3xl lg:text-4xl font-bold text-white leading-tight">
-                  Ready to stop managing chaos and start 
-                  <span className="block text-emerald-300">generating revenue?</span>
+                  هل أنت مستعد للتوقف عن إدارة الفوضى والبدء في
+                  <span className="block text-emerald-300">توليد الإيرادات؟</span>
                 </h3>
-                
+
                 <p className="text-lg text-zinc-300 max-w-2xl mx-auto leading-relaxed">
-                  Every feature works together to transform your agency into a 
-                  <span className="text-white font-semibold"> professional, profitable, scalable business</span>. 
-                  See the difference in your first week.
+                  كل ميزة تعمل معاً لتحويل وكالتك إلى
+                  <span className="text-white font-semibold"> عمل احترافي ومربح وقابل للتوسع</span>.
+                  شاهد الفرق في أسبوعك الأول.
                 </p>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button 
+                <Button
                   size="lg"
                   className="bg-emerald-500 text-white hover:bg-emerald-400 font-semibold px-8 py-6 text-lg h-auto rounded-xl group shadow-lg"
                 >
-                  Start Your Transformation FREE
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  ابدأ تحولك مجاناً
+                  <ArrowRight className="mr-2 w-5 h-5 group-hover:-translate-x-1 transition-transform rotate-180" />
                 </Button>
-                
-                <Button 
+
+                <Button
                   size="lg"
                   variant="outline"
                   className="border-zinc-600 text-white hover:bg-zinc-800/50 px-8 py-6 text-lg h-auto rounded-xl"
                 >
-                  See 2-Minute Demo
+                  شاهد عرضاً مدته دقيقتان
                 </Button>
               </div>
-              
+
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-zinc-800 text-sm text-zinc-400">
-                <div>✓ 5-minute setup</div>
-                <div>✓ Free until first client</div>
-                <div>✓ Cancel anytime</div>
+                <div>✓ إعداد في 5 دقائق</div>
+                <div>✓ مجاني حتى أول عميل</div>
+                <div>✓ إلغاء في أي وقت</div>
               </div>
             </CardContent>
           </Card>
@@ -360,4 +360,4 @@ export default function BentoFeatures() {
       </div>
     </section>
   );
-} 
+}

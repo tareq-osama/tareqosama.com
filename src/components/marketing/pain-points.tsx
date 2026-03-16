@@ -6,28 +6,28 @@ import { X, Check } from 'lucide-react';
 export default function PainPoints() {
   const comparisons = [
     {
-      problem: "Scattered communication across 15+ tools",
-      solution: "All client communication in one place"
+      problem: "تواصل متفرق عبر أكثر من 15 أداة",
+      solution: "جميع تواصلات العملاء في مكان واحد"
     },
     {
-      problem: "Manual invoices taking 2+ hours each",
-      solution: "Automated invoicing in under 5 minutes"
+      problem: "فواتير يدوية تستغرق أكثر من ساعتين لكل منها",
+      solution: "فوترة آلية في أقل من 5 دقائق"
     },
     {
-      problem: "Clients constantly asking for project updates",
-      solution: "Real-time project dashboard for clients"
+      problem: "عملاء يسألون باستمرار عن تحديثات المشروع",
+      solution: "لوحة تحكم مشروع فورية للعملاء"
     },
     {
-      problem: "Losing track of deadlines and deliverables",
-      solution: "Automated deadline tracking and reminders"
+      problem: "فقدان تتبع المواعيد النهائية والمخرجات",
+      solution: "تتبع آلي للمواعيد النهائية والتذكيرات"
     },
     {
-      problem: "Unprofessional experience hurting reputation",
-      solution: "White-label portal with your branding"
+      problem: "تجربة غير احترافية تضر بالسمعة",
+      solution: "بوابة مخصصة بعلامتك التجارية"
     },
     {
-      problem: "Chasing payments for 30+ days",
-      solution: "Faster payments with automated reminders"
+      problem: "ملاحقة الدفعات لأكثر من 30 يوماً",
+      solution: "مدفوعات أسرع مع تذكيرات آلية"
     }
   ];
 
@@ -36,22 +36,22 @@ export default function PainPoints() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="text-center component-spacing">
           <h2 className="text-h2 font-bold text-white mb-4">
-            The hidden cost of chaos
+            التكلفة الخفية للفوضى
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-            Every day without professional systems costs your agency money and reputation
+            كل يوم بدون أنظمة احترافية يكلّف وكالتك المال والسمعة
           </p>
         </div>
 
         <div className="card-minimal overflow-hidden">
-          {/* Table Header */}
+          {/* رأس الجدول */}
           <div className="grid grid-cols-2 bg-zinc-900/50 border-b border-zinc-800">
             <div className="p-6 border-r border-zinc-800">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-zinc-800 rounded-full flex items-center justify-center">
                   <X className="w-4 h-4 text-zinc-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-zinc-300">Without Tareq</h3>
+                <h3 className="text-lg font-semibold text-zinc-300">بدون طارق</h3>
               </div>
             </div>
             <div className="p-6">
@@ -59,12 +59,12 @@ export default function PainPoints() {
                 <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                   <Check className="w-4 h-4 text-black" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">With Tareq</h3>
+                <h3 className="text-lg font-semibold text-white">مع طارق</h3>
               </div>
             </div>
           </div>
 
-          {/* Comparison Rows */}
+          {/* صفوف المقارنة */}
           {comparisons.map((item, index) => (
             <div key={index} className="grid grid-cols-2 border-b border-zinc-800 last:border-b-0">
               <div className="p-6 border-r border-zinc-800">
@@ -83,17 +83,16 @@ export default function PainPoints() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
+        {/* دعوة للعمل السفلية */}
         <div className="text-center mt-12">
           <p className="text-sm text-zinc-500 mb-4">
-            Every day you wait costs you $128 in lost efficiency
+            كل يوم انتظار يكلّفك 128 دولاراً في الكفاءة المفقودة
           </p>
           <a href="#pricing" className="btn-primary">
-            Stop the bleeding
+            أوقف النزيف
           </a>
         </div>
       </div>
     </section>
   );
 }
-

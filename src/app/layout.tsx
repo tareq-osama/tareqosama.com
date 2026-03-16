@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { IBM_Plex_Sans_Arabic } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
-import Navbar from "@/components/marketing/site-nav"
 import Footer from "@/components/marketing/footer"
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/react'
@@ -10,36 +9,37 @@ import GoogleTagManager from '@/components/seo/google-tag-manager'
 import "./globals.css"
 import Navigation from "@/components/marketing/navigation"
 
-const inter = Inter({ 
-  subsets: ["latin"],
+const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-ibm-plex-arabic',
 })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tareqosama.com'),
   title: {
-    default: "Tareq Osama - Digital Designer & Web Developer",
-    template: "%s | Tareq Osama"
+    default: "طارق أسامة - مصمم رقمي ومطوّر ويب",
+    template: "%s | طارق أسامة"
   },
-  description: "Tareq is a Digital Designer and Web Developer, focused on merging web technologies, AI, marketing and branding strategies to build innovative solutions that drive business growth and elevate brands presence.",
+  description: "طارق مصمم رقمي ومطوّر ويب يجمع بين تقنيات الويب والذكاء الاصطناعي واستراتيجيات التسويق والعلامة التجارية لبناء حلول مبتكرة تدفع نمو الأعمال وترفع مستوى حضور العلامات التجارية.",
   keywords: [
-    "digital designer",
-    "web developer",
-    "web design",
-    "UI/UX design",
-    "branding",
-    "marketing strategy",
-    "web technologies",
-    "AI integration",
-    "frontend development",
-    "responsive design",
-    "creative design",
-    "brand identity"
+    "مصمم رقمي",
+    "مطوّر ويب",
+    "تصميم ويب",
+    "تصميم UI/UX",
+    "هوية بصرية",
+    "استراتيجية تسويق",
+    "تقنيات ويب",
+    "تكامل الذكاء الاصطناعي",
+    "تطوير الواجهة الأمامية",
+    "تصميم متجاوب",
+    "تصميم إبداعي",
+    "هوية العلامة التجارية"
   ],
-  authors: [{ name: "Tareq Osama", url: "https://tareqosama.com" }],
-  creator: "Tareq Osama",
-  publisher: "Tareq Osama",
+  authors: [{ name: "طارق أسامة", url: "https://tareqosama.com" }],
+  creator: "طارق أسامة",
+  publisher: "طارق أسامة",
   formatDetection: {
     email: false,
     address: false,
@@ -47,24 +47,24 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "ar_AE",
     url: "https://tareqosama.com",
-    title: "Tareq Osama - Digital Designer & Web Developer",
-    description: "Digital Designer and Web Developer focused on merging web technologies, AI, marketing and branding strategies to build innovative solutions that drive business growth and elevate brands presence.",
-    siteName: "Tareq Osama",
+    title: "طارق أسامة - مصمم رقمي ومطوّر ويب",
+    description: "مصمم رقمي ومطوّر ويب يجمع بين تقنيات الويب والذكاء الاصطناعي واستراتيجيات التسويق والعلامة التجارية لبناء حلول مبتكرة تدفع نمو الأعمال وترفع مستوى حضور العلامات التجارية.",
+    siteName: "طارق أسامة",
     images: [
       {
         url: "https://tareqosama.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Tareq  ",
+        alt: "طارق أسامة",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tareq Osama - Digital Designer & Web Developer",
-    description: "Digital Designer and Web Developer focused on merging web technologies, AI, marketing and branding strategies to build innovative solutions.",
+    title: "طارق أسامة - مصمم رقمي ومطوّر ويب",
+    description: "مصمم رقمي ومطوّر ويب يجمع بين تقنيات الويب والذكاء الاصطناعي واستراتيجيات التسويق والعلامة التجارية لبناء حلول مبتكرة.",
     creator: "@tareq",
     images: ["https://tareqosama.com/twitter-image.jpg"],
   },
@@ -95,8 +95,8 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
-  category: "Personal Portfolio",
-  classification: "Digital Design & Web Development",
+  category: "Portfolio شخصي",
+  classification: "التصميم الرقمي وتطوير الويب",
   referrer: "origin-when-cross-origin",
   colorScheme: "dark light",
   themeColor: [
@@ -119,7 +119,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://tareqosama.com",
     languages: {
-      "en-US": "https://tareqosama.com",
+      "ar-AE": "https://tareqosama.com",
     },
   },
 }
@@ -127,25 +127,25 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Tareq Osama",
-  jobTitle: "Digital Designer & Web Developer",
-  description: "Digital Designer and Web Developer focused on merging web technologies, AI, marketing and branding strategies to build innovative solutions that drive business growth and elevate brands presence.",
+  name: "طارق أسامة",
+  jobTitle: "مصمم رقمي ومطوّر ويب",
+  description: "مصمم رقمي ومطوّر ويب يجمع بين تقنيات الويب والذكاء الاصطناعي واستراتيجيات التسويق والعلامة التجارية لبناء حلول مبتكرة تدفع نمو الأعمال وترفع مستوى حضور العلامات التجارية.",
   url: "https://tareqosama.com",
   sameAs: [
     "https://tareqosama.com"
   ],
   knowsAbout: [
-    "Web Design",
-    "Web Development",
-    "UI/UX Design",
-    "Branding",
-    "Marketing Strategy",
-    "AI Integration",
-    "Frontend Development"
+    "تصميم الويب",
+    "تطوير الويب",
+    "تصميم UI/UX",
+    "هوية بصرية",
+    "استراتيجية تسويق",
+    "تكامل الذكاء الاصطناعي",
+    "تطوير الواجهة الأمامية"
   ],
   alumniOf: {
     "@type": "Organization",
-    name: "Web Development & Design"
+    name: "تطوير الويب والتصميم"
   }
 }
 
@@ -155,21 +155,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={inter.variable}>
+    <html lang="ar" dir="rtl" suppressHydrationWarning className={ibmPlexSansArabic.variable}>
       <head>
-
-     {/* Tailwind CSS */}
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
-        {/* Google Tag Manager - HEAD */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <GoogleTagManager />
-        
-        {/* Google Search Console Verification */}
-        <meta  name="google-site-verification" content="your-google-verification-code-here" />
-        
-
-     
+        <meta name="google-site-verification" content="your-google-verification-code-here" />
         <Script
           id="structured-data"
           type="application/ld+json"
@@ -180,17 +170,15 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
-      <body className={`${inter.className} antialiased`}>
-        {/* Google Tag Manager (noscript) - BODY */}
+      <body className={`${ibmPlexSansArabic.className} antialiased`}>
         <noscript>
-          <iframe 
+          <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-KKQSBJLP"
-            height="0" 
-            width="0" 
+            height="0"
+            width="0"
             style={{display: 'none', visibility: 'hidden'}}
           />
         </noscript>
-        
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

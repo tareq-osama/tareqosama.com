@@ -11,7 +11,7 @@ export default function Hero() {
     <section className="relative min-h-screen bg-zinc-950">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center min-h-screen py-24 gap-16">
-          {/* Left Column - Content */}
+          {/* العمود الأيسر - المحتوى */}
           <div className="flex-1 space-y-12">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -19,93 +19,93 @@ export default function Hero() {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
-              {/* Badge */}
+              {/* الشارة */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800">
                 <div className="w-2 h-2 bg-white rounded-full" />
                 <span className="text-sm font-medium text-zinc-300">
-                  Used by 800+ agencies worldwide
+                  تثق بها أكثر من 800 وكالة حول العالم
                 </span>
               </div>
 
-              {/* Main Heading */}
+              {/* العنوان الرئيسي */}
               <h1 className="text-h1 font-bold text-white leading-tight">
-                Stop losing clients to
+                أوقف خسارة العملاء بسبب
                 <span className="block text-zinc-400 mt-2">
-                  unprofessional chaos
+                  الفوضى غير الاحترافية
                 </span>
               </h1>
 
-              {/* Subheading */}
+              {/* العنوان الفرعي */}
               <p className="text-xl text-zinc-400 leading-relaxed max-w-2xl">
-                The platform that transforms scattered agencies into 
-                <span className="text-white font-medium"> professional powerhouses</span>. 
-                Grow your revenue while working less.
+                المنصة التي تحوّل الوكالات المتفرقة إلى
+                <span className="text-white font-medium"> مؤسسات احترافية قوية</span>.
+                نمّ إيراداتك بينما تعمل أقل.
               </p>
 
-              {/* Value Props */}
+              {/* نقاط القيمة */}
               <div className="grid grid-cols-2 gap-4 text-sm text-zinc-400">
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-zinc-600 rounded-full" />
-                  <span>Setup in 5 minutes</span>
+                  <span>الإعداد في 5 دقائق</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-zinc-600 rounded-full" />
-                  <span>Free until first client</span>
+                  <span>مجاني حتى أول عميل</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-zinc-600 rounded-full" />
-                  <span>No contracts</span>
+                  <span>بدون عقود</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-zinc-600 rounded-full" />
-                  <span>Cancel anytime</span>
+                  <span>إلغاء في أي وقت</span>
                 </div>
               </div>
 
-              {/* CTA Buttons */}
+              {/* أزرار الدعوة للعمل */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link href="#pricing" className="btn-primary gap-2">
-                  Get started free
-                  <ArrowRight className="w-4 h-4" />
+                  ابدأ مجاناً
+                  <ArrowRight className="w-4 h-4 rotate-180" />
                 </Link>
-                
+
                 <Link href="#features" className="btn-secondary gap-2">
                   <Play className="w-4 h-4" />
-                  See demo
+                  شاهد العرض
                 </Link>
               </div>
 
-              {/* Social Proof Stats */}
+              {/* إحصائيات الإثبات الاجتماعي */}
               <div className="grid grid-cols-3 gap-8 pt-12 border-t border-zinc-800">
                 <div>
                   <div className="text-2xl font-bold text-white">289%</div>
-                  <div className="text-sm text-zinc-500">Average revenue increase</div>
+                  <div className="text-sm text-zinc-500">متوسط زيادة الإيرادات</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-white">4.9★</div>
-                  <div className="text-sm text-zinc-500">Customer rating</div>
+                  <div className="text-sm text-zinc-500">تقييم العملاء</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-white">$4.2M</div>
-                  <div className="text-sm text-zinc-500">Revenue processed</div>
+                  <div className="text-sm text-zinc-500">إيرادات معالجة</div>
                 </div>
               </div>
 
-              {/* Testimonial Quote */}
+              {/* اقتباس شهادة */}
               <div className="card-minimal p-6">
                 <p className="text-zinc-300 mb-3">
-                  "Tareq transformed my chaotic agency into a streamlined operation. 
-                  My clients actually thank me for the professional experience now."
+                  "حوّل طارق وكالتي الفوضوية إلى عملية مبسطة.
+                  عملاؤه يشكرونه الآن على التجربة الاحترافية."
                 </p>
                 <div className="text-sm">
-                  <span className="text-white font-medium">Sarah Chen</span>
+                  <span className="text-white font-medium">سارة شن</span>
                   <span className="text-zinc-500"> — Digital Spark Agency</span>
                 </div>
               </div>
             </motion.div>
           </div>
 
-          {/* Right Column - Dashboard Preview */}
+          {/* العمود الأيمن - معاينة لوحة التحكم */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -113,11 +113,11 @@ export default function Hero() {
             className="flex-1"
           >
             <div className="relative">
-              {/* Main Dashboard Image */}
+              {/* صورة لوحة التحكم الرئيسية */}
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800">
                 <Image
-                                  src="/corvex-dashboard.jpg"
-                alt="Tareq Agency Dashboard"
+                  src="/corvex-dashboard.jpg"
+                  alt="لوحة تحكم وكالة طارق"
                   fill
                   className="object-cover"
                   priority
@@ -125,16 +125,16 @@ export default function Hero() {
                 />
               </div>
 
-              {/* Simple Floating Elements */}
+              {/* عناصر عائمة */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="absolute -bottom-4 -left-4 bg-zinc-900 border border-zinc-800 rounded-lg p-3"
+                className="absolute -bottom-4 -right-4 bg-zinc-900 border border-zinc-800 rounded-lg p-3"
               >
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-white rounded-full" />
-                  <span className="text-sm text-white">Live portal</span>
+                  <span className="text-sm text-white">بوابة مباشرة</span>
                 </div>
               </motion.div>
 
@@ -142,11 +142,11 @@ export default function Hero() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1 }}
-                className="absolute -top-4 -right-4 bg-white text-black rounded-lg p-3"
+                className="absolute -top-4 -left-4 bg-white text-black rounded-lg p-3"
               >
                 <div className="text-center">
                   <div className="text-lg font-bold">3x</div>
-                  <div className="text-xs">ROI</div>
+                  <div className="text-xs">عائد الاستثمار</div>
                 </div>
               </motion.div>
             </div>
